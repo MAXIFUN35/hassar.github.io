@@ -18,13 +18,15 @@ img {
     display: inline-block;
     padding-top: 20px;
     padding-bottom: 20px;
+    box
+
 }
 .ind__ul--h1 {
     font-family: sriracha  ;
     font-weight: 100;
     display: inline-block;
     text-align: left;
-    width: 40%;
+    width: 100%;
     margin-left: 10px;
     color:rgb(240, 158, 158);
 }
@@ -32,7 +34,7 @@ img {
    width:100%; 
 }
 .menu__ind--ul {
-    text-align: left;
+    text-align: center;
     width: 100vw;
 }
 .ind__ul--li {
@@ -45,6 +47,20 @@ img {
     margin-left: 10px;
     margin-right: 10px;
     font-weight: 700;
+    border-color:rgb(240, 158, 158) ;
+    border-radius: 20px;
+    border-width: 20     px;
+    background-color: rgb(250, 229, 229);
+    padding: 7px;
+}
+.lorem {
+    margin: 50px;
+}
+.main__sect--sect{
+    text-align:center;
+}
+.mail__sect--h2 {
+    margin:40px ;
 }
 footer {
     background-color: rgb(85, 46, 46);
@@ -52,7 +68,7 @@ footer {
     text-align: left;
     bottom: 0;
     color:rgb(187, 182, 182);
-    position: absolute;
+    position: end;
 }
 .foot__conta {
     padding-left: 20px;
