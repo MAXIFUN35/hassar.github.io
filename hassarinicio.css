@@ -73,7 +73,7 @@ footer {
     bottom: 0;
     color:rgb(187, 182, 182);
     position: end;
-    background-image: url(multimedia/footerimg.jpg);
+    background-image: url(footerimg.jpg);
     background-size:contain;
     height:60vh;
 }
