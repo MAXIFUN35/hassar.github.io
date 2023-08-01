@@ -4,40 +4,48 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+}
 img {
-    border-style: none;
-    max-width: 100%;
-}
-}
-.menu {
+        border-style: none;
+        max-width: 100%;
 }
 .menu__HsP {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
     color: white;   
-    display: inline-block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box
-
+    display: inline;
+    z-index: 50;
+    position: fixed;
+    background: white;
+    opacity: 1;
+}
+.menu__HsPFALSO {
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;   
+    display: inline;
+    z-index: 50;
+    background: white;
+    opacity: 0.1;
 }
 .ind__ul--h1 {
     font-family: sriracha  ;
     font-weight: 100;
     display: inline-block;
     text-align: left;
-    width: 100%;
-    margin-left: 10px;
+    margin-left:60px;
     color:rgb(240, 158, 158);
-    padding-bottom: 10px;
+    display: inline;
 }
 .menu__ind {
    width:100%; 
+   padding-top: 30px;
+   padding-bottom: 15PX;
 }
 .menu__ind--ul {
     text-align: center;
-    width: 100vw;
-    padding-bottom: 5px;
+    width: 100%;
+    padding-top: 5px;
 }
 .ind__ul--li {
     display:inline-block ;
@@ -55,36 +63,52 @@ img {
     background-color: rgb(250, 229, 229);
     padding: 7px;
 }
+.main{
+    padding-top: 10px;
+    background-position: end;
+    background-attachment:;
+    background-size:auto;
+    padding-bottom: 50px;
+    padding-right:70px;
+    padding-left: 70px;
+}
 .lorem {
     margin: 50px;
-    font-family:'Gill Sans MT', Calibri,    
+    font-family:'Gill Sans MT', Calibri, 
+       
 }
 .main__sect--sect{
     text-align:center;
-    font-family:'Trebuchet MS'
+    font-family:'Trebuchet MS';
+    background: white;
+    /*background-image: url(multimedia/tortachoco.jpg);*/
+    border-radius: 20px;
+    background-color: rgb(253, 255, 154);
 }
-.mail__sect--h2 {
-    margin:40px ;
+.main__sect--h2 {
+    opacity: 1 !important;
+}
+.main__sectA--h2{
+    text-align: center;
+}
+.sect__conta {
+    padding-left: 20px;
+}
+.link{
+    color:rgb(0, 0, 0);
 }
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
-    text-align: bottom;
-    bottom: 0;
-    color:rgb(187, 182, 182);
-    position: end;
-    background-image: url(footerimg.jpg);
-    background-size:contain;
-    height:60vh;
-}
-.foot__conta {
-    padding-left: 20px;
-}
-.link{
-    color:rgb(187, 182, 182);
-}
-.hassar-p {
     text-align: center;
-    margin-bottom: 10px;
-    
+    display: inline-block;
+    color:rgb(187, 182, 182);
+    background-image: url(multimedia/tortachoco.jpg);
+    background-size:contain;
+    height: 100%;
+    border-color: rgba(240, 248, 255, 0);
+}
+.footer-p {
+    margin-bottom: 10px; 
+    display: inline-block;
 }
