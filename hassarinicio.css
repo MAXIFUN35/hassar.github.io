@@ -91,18 +91,18 @@ img {
 .main__sectA--h2{
     text-align: center;
 }
-.sect__conta {
+.footer__conta {
     padding-left: 20px;
 }
 .link{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
 }
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
     text-align: center;
     display: inline-block;
-    color:rgb(187, 182, 182);
+    color:rgb(255, 255, 255);
     background-image: url(tortachoco.jpg);
     background-size:contain;
     height: 100%;
