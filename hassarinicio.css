@@ -5,38 +5,51 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
+html{
+    background-color: rgb(0, 0, 0);
+}
 img {
         border-style: none;
         max-width: 100%;
 }
-.menu__HsP {
+.titulo {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
     color: white;   
     display: inline;
     z-index: 50;
     position: fixed;
-    background: white;
+    background: transparent;
     opacity: 1;
 }
-.menu__HsPFALSO {
-    width:100%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;   
-    display: inline;
-    z-index: 50;
+.titulo :hover{
     background: white;
-    opacity: 0;
+    transition: all .3s;
 }
-.ind__ul--h1 {
+.titulo__nav {
+   width:100%; 
+   padding-top: 1em;
+   padding-bottom: 1em;
+   background: transparent;
+}
+.titulo__nav--ul {
+    width: 100%;
+    display: inline-block;
+}
+.titulo__nav--ul1 {
+    text-align: left;
+    display: inline-block;
+    width: 60%;
+}
+.titulo__nav--h1 {
     font-family: sriracha  ;
     font-weight: 100;
-    display: inline;
+    display: inline;    
     text-align: left;
     margin-left:60px;
     color:rgb(240, 158, 158);
 }
-.ind__ul--h1P {
+.titulo__nav--h1P {
     font-family: sans-serif  ;
     font-weight: 100;
     text-align: left;
@@ -44,42 +57,40 @@ img {
     color:rgb(240, 158, 158);
     display: inline;
 }
-.menu__ind {
-   width:100%; 
-   padding-top: 20px;
-   padding-bottom: 20PX;
-}
-.menu__ind--ul {
+.titulo__nav--ul2 {
     text-align: center;
-    width: 100%;
-    padding-top: 5px;
     display: inline-block;
+    width: 40%;
 }
-.menu__ind--ul1 {
-    text-align: left;
-    display: inline;
-    width: 100%;
+.titulo__nav--li {
+    display:inline ;
 }
-.menu__ind--ul2 {
-    text-align: center;
-    display: inline;
-    width: 100%;
-}
-.ind__ul--li {
-    display:inline-block ;
-}
-.ul__li--a {
+.titulo__nav--a {
     text-decoration: none;
     color: rgb(240, 158, 158);
     font-size:1em;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-weight: 700;
+    font-weight: 500;
     border-color:rgb(240, 158, 158) ;
-    border-radius: 20px;
-    border-width: 20     px;
-    background-color: rgb(250, 229, 229);
+    border-radius: 10px;
+    border-width: 1em;
     padding: 7px;
+    border: 1px solid;
+}
+.section{
+    background-size:cover;
+    height:100vh;
+    opacity: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta1.jpg");
+}
+.sect__h2{
+    text-align: center;
+    display: inline-block;
+    font-size:4em;
+    font-weight: 600;
+    color: rgb(241, 158, 158);
+    margin-top: 1em;
+    margin-left: 20px;
+    opacity: 1;
 }
 .main{
     padding-top: 10px;
@@ -89,32 +100,7 @@ img {
     padding-right:70px;
     padding-left: 70px;
 }
-.lorem {
-    margin: 50px;
-    font-family:'Gill Sans MT', Calibri, 
-       
-}
-.main__sect--sect{
-    text-align:center;
-    font-family:'Trebuchet MS';
-    background: white;
-    /*background-image: url(multimedia/tortachoco.jpg);*/
-    border-radius: 20px;
-    background-color: rgb(253, 255, 154);
-}
-.main__sect--h2 {
-    opacity: 1 !important;
-}
-.main__sectA--h2{
-    text-align: center;
-}
-.footer__conta {
-    padding-left: 20px;
-}
-.link{
-    color:rgb(255, 255, 255);
-    
-}
+
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
@@ -125,6 +111,13 @@ footer {
     background-size:contain;
     height: 100%;
     border-color: rgba(240, 248, 255, 0);
+}
+.footer__conta {
+    padding-left: 20px;
+}
+.link{
+    color:rgb(255, 255, 255);
+    
 }
 .footer-p {
     margin-bottom: 10px; 
@@ -140,22 +133,36 @@ footer {
     top: 5px;
 }
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
-@media screen and (max-width: 768px) {
-
-    .menu__ind--ul2 {
-        display: none; /* Ocultar el menú en pantallas pequeñas */
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        background-color: #444;
-        padding: 10px;
+@media screen and (max-width: 978px) {
+    .titulo__nav--ul{
+        text-align: center;
     }
-    .menu__ind--ul1 {
+
+    .titulo__nav--li {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+    }
+    .titulo__nav--ul1 {
         text-align: center;
         margin:auto;
     }
-    .ind__ul--h1 {
+    .titulo__nav--h1 {
         margin: auto;
+    }
+    .titulo__nav--a{
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 700;
+
+    }
+    .section{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta2.jpg");
+    }
+    .sect__h2{
+        font-size: 3em;
+        text-align: right;
+        margin-right:10px ;
+        margin-top: 13em;
+
     }
     .main{
         padding-top: 10px;
@@ -165,4 +172,13 @@ footer {
         padding-right:30px;
         padding-left: 30px;
     }
+}
+.menu__HsPFALSO {
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;   
+    display: inline;
+    z-index: 50;
+    background: white;
+    opacity: 0;
 }
