@@ -26,7 +26,7 @@ img {
     display: inline;
     z-index: 50;
     background: white;
-    opacity: 0.1;
+    opacity: 0;
 }
 .ind__ul--h1 {
     font-family: sriracha  ;
