@@ -31,21 +31,39 @@ img {
 .ind__ul--h1 {
     font-family: sriracha  ;
     font-weight: 100;
-    display: inline-block;
+    display: inline;
     text-align: left;
     margin-left:60px;
+    color:rgb(240, 158, 158);
+}
+.ind__ul--h1P {
+    font-family: sans-serif  ;
+    font-weight: 100;
+    text-align: left;
+    margin-left:-5px;
     color:rgb(240, 158, 158);
     display: inline;
 }
 .menu__ind {
    width:100%; 
    padding-top: 30px;
-   padding-bottom: 15PX;
+   padding-bottom: 30PX;
 }
 .menu__ind--ul {
     text-align: center;
     width: 100%;
     padding-top: 5px;
+    display: inline-block;
+}
+.menu__ind--ul1 {
+    text-align: left;
+    display: inline;
+    width: 100%;
+}
+.menu__ind--ul2 {
+    text-align: center;
+    display: inline;
+    width: 100%;
 }
 .ind__ul--li {
     display:inline-block ;
@@ -66,7 +84,6 @@ img {
 .main{
     padding-top: 10px;
     background-position: end;
-    background-attachment:;
     background-size:auto;
     padding-bottom: 50px;
     padding-right:70px;
@@ -96,6 +113,7 @@ img {
 }
 .link{
     color:rgb(255, 255, 255);
+    margin-top: 10px;
 }
 footer {
     background-color: rgb(85, 46, 46);
@@ -111,4 +129,12 @@ footer {
 .footer-p {
     margin-bottom: 10px; 
     display: inline-block;
+}
+
+.footer__ul--li { 
+    display: inline-block;
+    margin: 5px;
+}
+.contacto-img{
+    top: 5px;
 }
