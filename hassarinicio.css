@@ -8,6 +8,9 @@
 html{
     background-color: rgb(0, 0, 0);
 }
+body{
+
+}
 img {
         border-style: none;
         max-width: 100%;
@@ -21,10 +24,7 @@ img {
     position: fixed;
     background: transparent;
     opacity: 1;
-}
-.titulo :hover{
-    background: white;
-    transition: all .3s;
+    transition: all .5s;
 }
 .titulo__nav {
    width:100%; 
@@ -56,6 +56,7 @@ img {
     margin-left:-5px;
     color:rgb(240, 158, 158);
     display: inline;
+    background-color: transparent;
 }
 .titulo__nav--ul2 {
     text-align: center;
@@ -70,27 +71,44 @@ img {
     color: rgb(240, 158, 158);
     font-size:1em;
     font-weight: 500;
-    border-color:rgb(240, 158, 158) ;
+    padding: 7px;
+}
+.titulo__nav--a  :hover{
+    color: rgb(250, 158, 158);
     border-radius: 10px;
     border-width: 1em;
-    padding: 7px;
-    border: 1px solid;
+    border: 2px solid;
+    border-color:rgb(240, 158, 158) ;
+    transition: border 1s;
+
 }
 .section{
     background-size:cover;
+    background-position-x: center;
     height:100vh;
     opacity: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta1.jpg");
 }
-.sect__h2{
+.sect__p{
     text-align: center;
     display: inline-block;
     font-size:4em;
     font-weight: 600;
     color: rgb(241, 158, 158);
-    margin-top: 1em;
-    margin-left: 20px;
+    margin-top: 7em;
+    margin-left: 1em;
     opacity: 1;
+}
+.section__div{
+    display: flex;
+    justify-content: center;
+    top: 88vh;
+    position: relative;
+}
+.flecha{
+    cursor: pointer;
+    position: relative;
+    height: 2em;
 }
 .main{
     padding-top: 10px;
@@ -100,7 +118,9 @@ img {
     padding-right:70px;
     padding-left: 70px;
 }
-
+.hola{
+    color: aliceblue;
+}
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
@@ -155,14 +175,23 @@ footer {
 
     }
     .section{
+        height: 99vh;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta2.jpg");
+        background-position-y: center;
+        background-position-x: center;
     }
-    .sect__h2{
-        font-size: 3em;
-        text-align: right;
-        margin-right:10px ;
-        margin-top: 13em;
-
+    .section__div{
+        display: flex;
+        position: static
+    }
+    .flecha{
+        display: inline-block;
+        position: relative;
+        top: 90vh;
+        left: auto;
+        height: 1em;
+        margin: 0 46vw;
+        image-rendering: optimizeQuality;
     }
     .main{
         padding-top: 10px;
