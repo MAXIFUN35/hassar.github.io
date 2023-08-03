@@ -29,35 +29,25 @@ function scrollToSection() {
   });
 }
 document.getElementById('contacto').addEventListener('click', scrollToSection);
-
-//*let currentPosition = 0;
-//*const carouselTrack = document.querySelector('.div__div1');
-
-//*function slideToNext() {
- //* const containerWidth = document.querySelector('.div').offsetWidth;
- //* currentPosition = (currentPosition - containerWidth) % (carouselTrack.offsetWidth);
- //* carouselTrack.style.transform = `translateX(${currentPosition}px)`;
-//*}
-
-//*setInterval(slideToNext, 4000); // Cambia la imagen cada 3 segundos (ajusta el valor según tus necesidades)
-// Función para verificar si el usuario está en un dispositivo móvil
-
-  // Obtenemos los elementos necesarios del DOM
+// desplegable
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
   const checkbox = document.getElementById('checkmenu');
   const desplegable = document.getElementById('titulo');
+  const imagen = document.getElementById('barramenu');
+  const menu = document.getElementById('menu')
+  let isDesplegableOpen = false;
+  
+  
 
-  // Añadimos un evento de cambio al checkbox
-  checkbox.addEventListener('change', function() {
-    // Si el checkbox está marcado, mostramos el desplegable
-    if (checkbox.checked) {
-      desplegable.style.height = '100vh';
-      desplegable.style.backgroundColor = 'white';
-    } else {
-      desplegable.style.height = '100vh';
-      var scrollPosition = window.scrollY;
+  function cerrarDesplegable() {
+    desplegable.style.height = '5em';
+    menu.style.display = 'none'
+    var scrollPosition = window.scrollY;
 
-      var triggerPosition = 180; 
-      var header = document.getElementById('titulo');
+    var triggerPosition = 180; 
+    var header = document.getElementById('titulo');
 
       if (scrollPosition >= triggerPosition) {
           header.style.backgroundColor = 'white';
@@ -68,8 +58,38 @@ document.getElementById('contacto').addEventListener('click', scrollToSection);
           header.style.animation = '.3s';
           desplegable.style.height = '5em';
       }
+    isDesplegableOpen = false;
+  }
+
+  checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+      desplegable.style.height = '100vh';
+      desplegable.style.backgroundColor = 'white';
+      menu.style.display = 'block'
+      isDesplegableOpen = true;
+    } else {
+      cerrarDesplegable();
     }
+
+desplegable.addEventListener('click', function() {
+  if (isDesplegableOpen) {
+    cerrarDesplegable();
+  }
+});
+
+document.addEventListener('click', function(event) {
+  if (isDesplegableOpen && !desplegable.contains(event.target)) {
+    cerrarDesplegable();
+  }
+});
   });
+  function detectarDispositivoMovil() {
+    isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+  
+  // Llamamos a la función de detección al cargar la página
+  detectarDispositivoMovil();
+  
 
 
 

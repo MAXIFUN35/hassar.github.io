@@ -14,14 +14,20 @@ function onScroll() {
 
   var triggerPosition = 500; 
   var header = document.getElementById('titulo');
+  const alto = header.offsetHeight;
+  const alturaViewport = window.innerHeight;
 
-  if (scrollPosition >= triggerPosition) {
-      header.style.backgroundColor = 'white';
-  } else {
-      header.style.backgroundColor = 'transparent';
-      header.style.animation = '.3s'
+  if (alto < alturaViewport ){
+    if (scrollPosition >= triggerPosition) {
+        header.style.backgroundColor = 'white';
+    } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.animation = '.3s'
+    }
   }
+
 }
+// flecha abajo
 window.addEventListener('scroll', onScroll);
 function scrollToSection() {
   var image = document.getElementById('flecha');
@@ -32,7 +38,7 @@ function scrollToSection() {
       behavior: 'smooth' 
   });
 }
-
+// contacto
 document.getElementById('flecha').addEventListener('click', scrollToSection);
 window.addEventListener('scroll', onScroll);
 function scrollToSection() {
@@ -44,6 +50,53 @@ function scrollToSection() {
       behavior: 'smooth' 
   });
 }
-document.getElementById('contacto').addEventListener('click', scrollToSection);
+// menu
+  const checkbox = document.getElementById('checkmenu');
+  const desplegable = document.getElementById('titulo');
+  const imagen = document.getElementById('barramenu');
+  const menu = document.getElementById('menu')
+  let isDesplegableOpen = false;
 
+  function cerrarDesplegable() {
+    desplegable.style.height = '5em';
+    menu.style.display = 'none'
+    var scrollPosition = window.scrollY;
+
+    var triggerPosition = 500; 
+    var header = document.getElementById('titulo');
+
+      if (scrollPosition >= triggerPosition) {
+          header.style.backgroundColor = 'white';
+          desplegable.style.height = '5em';
+
+      } else {
+          header.style.backgroundColor = 'transparent';
+          header.style.animation = '.3s';
+          desplegable.style.height = '5em';
+      }
+    isDesplegableOpen = false;
+  }
+
+  checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+      desplegable.style.height = '100vh';
+      desplegable.style.backgroundColor = 'white';
+      menu.style.display = 'block'
+      isDesplegableOpen = true;
+    } else {
+      cerrarDesplegable();
+    }
+
+desplegable.addEventListener('click', function() {
+  if (isDesplegableOpen) {
+    cerrarDesplegable();
+  }
+});
+
+document.addEventListener('click', function(event) {
+  if (isDesplegableOpen && !desplegable.contains(event.target)) {
+    cerrarDesplegable();
+  }
+});
+  });
 
