@@ -17,12 +17,11 @@ img {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
     color: white;   
-    display: inline;
-    z-index: 50;
+    display: inline-block;
+    z-index: 5;
     position: fixed;
     background-color: transparent;
-    opacity: 1;
-    transition: all .5s;
+    transition: all ease .3s;
 }
 .titulo__nav {
    width:100%; 
@@ -33,6 +32,7 @@ img {
 .titulo__nav--ul {
     width: 100%;
     display: inline-block;
+    height: 100%;
 }
 .titulo__nav--ul1 {
     text-align: left;
@@ -131,6 +131,9 @@ img {
     border-color:rgb(240, 158, 158) ;
     transition: border 1s;
 }
+.licheck{
+    display: none;
+}
 .div{
     height:50vh;
     width: 100%;
@@ -222,17 +225,12 @@ footer {
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
 @media screen and (max-width: 978px) {
     .titulo{
-        background-color:transparent;
-    }
-    .titulo :active{
-        background-color: white;
-        transition: 100vh;
-        transition: all .3s ease .3s;
+        height: 5em;
     }
     .titulo__nav--ul{
         text-align: center;
+        position: fixed;
     }
-
     .titulo__nav--li {
         display: none; /* Ocultar el menú en pantallas pequeñas */
     }
@@ -240,18 +238,15 @@ footer {
         text-align: center;
         display: inline;
     }
-        .titulo__nav--img{
+    .titulo__nav--img{
         display: inline-block;
-        height: 5px;
+        height: 1em;
+        padding: 0 0;
     }
     .menu{
         display: none;
-    }
-    .menu:active{
-        display: block;
         padding: 0;
         background-color: white;
-        height: 100vh;
         z-index: 60;
     }
     .barramenu__li{
@@ -266,9 +261,18 @@ footer {
         display: block;
         padding: 10px;
     }
+    #btnmenu{
+        border:0px;
+        background-color: transparent;
+    }
     .barramenu{
         display: inline-block;
         height: 1em;
+    }
+    .licheck{
+        display: inline;
+        opacity: 0;
+        position: inline;
     }
     .titulo__nav--h1 {
         margin: auto;

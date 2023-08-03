@@ -6,13 +6,18 @@ function onScroll() {
 
   var triggerPosition = 180; 
   var header = document.getElementById('titulo');
+  const alto = header.offsetHeight;
+  const alturaViewport = window.innerHeight;
 
-  if (scrollPosition >= triggerPosition) {
-      header.style.backgroundColor = 'white';
-  } else {
-      header.style.backgroundColor = 'transparent';
-      header.style.animation = '.3s'
+  if (alto < alturaViewport ){
+    if (scrollPosition >= triggerPosition) {
+        header.style.backgroundColor = 'white';
+    } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.animation = '.3s'
+    }
   }
+
 }
 window.addEventListener('scroll', onScroll);
 function scrollToSection() {
@@ -37,50 +42,35 @@ document.getElementById('contacto').addEventListener('click', scrollToSection);
 //*setInterval(slideToNext, 4000); // Cambia la imagen cada 3 segundos (ajusta el valor según tus necesidades)
 // Función para verificar si el usuario está en un dispositivo móvil
 
-//*funciones para disp moviles
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
+  // Obtenemos los elementos necesarios del DOM
+  const checkbox = document.getElementById('checkmenu');
+  const desplegable = document.getElementById('titulo');
 
-function executeMobileActions() {
-  const menu = document.getElementById('menu active');
-  const titulo = document.getElementById('titulo')
-  menu.classList.toggle('active');
-  titulo.classList.toggle('active');
-}
+  // Añadimos un evento de cambio al checkbox
+  checkbox.addEventListener('change', function() {
+    // Si el checkbox está marcado, mostramos el desplegable
+    if (checkbox.checked) {
+      desplegable.style.height = '100vh';
+      desplegable.style.backgroundColor = 'white';
+    } else {
+      desplegable.style.height = '100vh';
+      var scrollPosition = window.scrollY;
 
-function closeMobileMenu() {
-  
-  const titulo = document.getElementById('titulo')
-  const menu = document.getElementById('menu active');
-  
-  menu.classList.remove('active');
-  titulo.classList.remove('active');
-  
-}
+      var triggerPosition = 180; 
+      var header = document.getElementById('titulo');
 
-const menuButton = document.getElementById('btnmenu');
+      if (scrollPosition >= triggerPosition) {
+          header.style.backgroundColor = 'white';
+          desplegable.style.height = '5em';
 
-menuButton.addEventListener('click', (event) => {
-  event.preventDefault(); // Evitar que el enlace redireccione
-  if (isMobileDevice(true)) {
-    executeMobileActions();
-  }
-
-});
-const mobileLinks = document.querySelectorAll('#menuli a');
-mobileLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (isMobileDevice(false)) {
-      closeMobileMenu();
+      } else {
+          header.style.backgroundColor = 'transparent';
+          header.style.animation = '.3s';
+          desplegable.style.height = '5em';
+      }
     }
   });
-});
-document.body.addEventListener('click', (event) => {
-  if (!menu.contains(event.target) && event.target !== menuButton) {
-    menu.classList.remove('active');
-  }
-});
+
 
 
 
