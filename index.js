@@ -39,7 +39,6 @@ function isMobileDevice() {
   const menu = document.getElementById('menu')
   let isDesplegableOpen = false;
   
-  
 
   function cerrarDesplegable() {
     desplegable.style.height = '5em';
@@ -62,13 +61,15 @@ function isMobileDevice() {
   }
 
   checkbox.addEventListener('change', function() {
-    if (checkbox.checked) {
+    if(isMobileDevice){
+     if (checkbox.checked) {
       desplegable.style.height = '100vh';
       desplegable.style.backgroundColor = 'white';
       menu.style.display = 'block'
       isDesplegableOpen = true;
-    } else {
+     } else {
       cerrarDesplegable();
+     }
     }
 
 desplegable.addEventListener('click', function() {
