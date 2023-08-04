@@ -1,4 +1,4 @@
-/*galeria*/
+/*index*/
 * {
     padding: 0;
     margin: 0;
@@ -6,12 +6,13 @@
     text-decoration: none;
 }
 html{
-    background-color: rgb(250, 166, 166);
+    background-color: rgb(255, 255, 255);
 }
 img {
         border-style: none;
         max-width: 100%;
 }
+
 .titulo {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -38,7 +39,7 @@ img {
     display: inline-block;
     width: 60%;
 }
-.menu{
+#menu{
     display: none;
 }
 .menu__li{
@@ -68,20 +69,10 @@ img {
     background-color: transparent;
 }
 .titulo__nav--h1-2 {
-    font-family: sriracha  ;
-    font-weight: 100;
-    display: none;    
-    text-align: left;
-    color:rgb(240, 158, 158);
-}
-.titulo__nav--h1P-2 {
-    font-family: sans-serif  ;
-    font-weight: 100;
-    text-align: left;
-    margin-left:-5px;
-    color:rgb(240, 158, 158);
     display: none;
-    background-color: transparent;
+}
+.titulo__nav--h1P-2{
+    display: none;
 }
 .titulo__nav--ul2 {
     text-align: center;
@@ -109,7 +100,6 @@ img {
     font-size:1em;
     font-weight: 500;
     padding: 7px;
-    border-color:  rgb(240, 158, 158);
 }
 .titulo__nav--a3 {
     text-decoration: none;
@@ -142,42 +132,19 @@ img {
 .licheck{
     display: none;
 }
-#contacto{
-    cursor: pointer;
+.fondo{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: -1;
 }
-.section{
-    background-size:cover;
-    background-position-x: center;
-    height:100vh;
-    opacity: 1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta1.jpg");
-}
-.sect__p{
-    text-align: center;
-    display: inline-block;
-    font-size:4em;
-    font-weight: 600;
-    color: rgb(241, 158, 158);
-    margin-top: 7em;
-    margin-left: 1em;
-    opacity: 1;
-}
-.section__div{
+.div{
+    height: 30vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    top: 88vh;
-    position: relative;
-}
-.flecha{
-    cursor: pointer;
-    position: relative;
-    height: 2em;
-}
-.main{
-    height: 60em;
-}
-.hola{
-    color: aliceblue;
+    background-color: white;
+
 }
 footer {
     background-color: rgb(85, 46, 46);
@@ -219,8 +186,30 @@ footer {
         text-align: center;
         position: fixed;
     }
+    .titulo__nav--h1-2 {
+        font-family: sriracha  ;
+        font-weight: 100;
+        display: inline;    
+        text-align: left;
+        color:rgb(240, 158, 158);
+    }
+    .titulo__nav--h1P-2 {
+        font-family: sans-serif  ;
+        font-weight: 100;
+        text-align: left;
+        margin-left:-5px;
+        color:rgb(240, 158, 158);
+        display: inline;
+        background-color: transparent;
+    }
     .titulo__nav--li {
         display: none; /* Ocultar el menú en pantallas pequeñas */
+    }
+    .titulo__nav--h1 {
+        display: none;
+    }
+    .titulo__nav--h1P {
+        display: none;
     }
     .titulo__nav--ul1 {
         text-align: center;
@@ -231,22 +220,10 @@ footer {
         height: 1em;
         padding: 0 0;
     }
-    .titulo__nav--h1 {
-        display: none;
-    }
-    .titulo__nav--h1P {
-        display: none;
-    }
-    .titulo__nav--h1-2 {
-        display: inline;    
-    }
-    .titulo__nav--h1P-2 {
-        display: inline;
-    }
     .menu{
         display: none;
         padding: 0;
-        transition: all  .8s;
+        transition: all  1s;
     }
     .barramenu__li{
         padding: 2em 0;
@@ -280,33 +257,46 @@ footer {
         text-decoration: none;
         font-size: 1em;
         font-weight: 700;
-    .section{
-        height: 99vh;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("torta2.jpg");
-        background-position-y: center;
-        background-position-x: center;
-    }
-    .section__div{
-        display: flex;
-        position: static
-    }
-    .flecha{
-        display: inline-block;
-        position: relative;
-        top: 90vh;
-        left: auto;
-        height: 1em;
-        margin: 0 46vw;
-        image-rendering: optimizeQuality;
-    }
-    .main{
-        padding-top: 10px;
-        background-position: end;
-        background-size:auto;
-        padding-bottom: 50px;
-        padding-right:30px;
-        padding-left: 30px;
-    }
-}
 
+    }
+    .div{
+        height: 50vh;
+        overflow: hidden;
+    }
+    .div__div1{
+        width: 100%;
+        height: 100%;
+        background-image: none;
+        transition: .5s ease;
+        display: flex;
+
+    }
+    .div__div2{
+        display: none;
+        background-image: none;
+    }
+    .div__div3{
+        display: none;
+        background-image: none;
+    }
+    .img_model{
+        display: inline-block;
+        height: auto;
+    }
+    @keyframes rotateAnimation {
+        0%{
+            transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+      /* Estilo para la clase 'rotate-image' que aplica la animación */
+    .rotate-image {
+        transition: transform 0.3s;
+    }
+    /* Estilo para la clase 'rotate-animation' que activa la animación */
+    .rotate-animation {
+        animation: rotateAnimation 0.5s linear;
+    }
 }
