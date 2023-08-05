@@ -4,7 +4,7 @@
 function onScroll() {
   var scrollPosition = window.scrollY;
   const viewportHeight = window.innerHeight * 0.01;
-  const alturaEnVh = 10; // Puedes cambiar este valor a cualquier otra altura deseada
+  const alturaEnVh = 20; // Puedes cambiar este valor a cualquier otra altura deseada
   const alturaEnPixels = viewportHeight * alturaEnVh;
   var triggerPosition = 280; 
   var header = document.getElementById('titulo');

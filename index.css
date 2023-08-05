@@ -37,6 +37,7 @@ img {
     text-align: left;
     display: inline-block;
     width: 60%;
+    transition: all ease .3s;
 }
 #menu{
     display: none;
@@ -229,7 +230,14 @@ footer {
     top: 5px;
 }
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
-@media screen and (max-width: 978px) {
+@media screen and (max-width: 860px){
+    .titulo__nav--ul1{
+        width: 50%;
+        transition: all ease .3s;
+    }
+
+}
+@media screen and (max-width: 778px) {
     .titulo{
         height: 3em;
         overflow: hidden;
@@ -275,7 +283,7 @@ footer {
         display: inline-block;
         padding: 0 0;
         text-align: left;
-        margin-left: 1em;
+        margin-left: 1.5em;
         position: absolute;
         justify-content: center;
         margin-top: .7em;
@@ -289,7 +297,7 @@ footer {
         transition: all ease 5s;
     }
     .barramenu__li{
-        padding: 2em 0;
+        padding: 1em 0;
         color: rgb(240, 158, 158);
         text-decoration: none;
         transition: all ease 3s;
@@ -308,7 +316,7 @@ footer {
     }
     .barramenu{
         display: inline-block;
-        height: 1em;
+        height: 1.3em;
         transition: all ease .5s;
         transform: 0.3s;
       
