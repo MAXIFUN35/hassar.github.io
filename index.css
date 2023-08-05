@@ -191,6 +191,12 @@ img {
     font-size: 2em;
     font-weight: 500;
 }
+.section1__div2{
+    display: inline-block;
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align: center;
+}
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
@@ -226,11 +232,12 @@ footer {
 @media screen and (max-width: 978px) {
     .titulo{
         height: 3em;
+        overflow: hidden;
     }
     .titulo__nav{
         padding-top: .5vh;
         padding-bottom: .5vh;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, .2),  rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1),  rgba(0, 0, 0, .01));
     }
     .titulo__nav--ul {
         text-decoration: none;
@@ -276,12 +283,16 @@ footer {
     .menu{
         display: none;
         padding: 0;
-        transition: all  1s;
+        transition: all ease 3s;
+    }
+    #menuli{
+        transition: all ease 5s;
     }
     .barramenu__li{
         padding: 2em 0;
         color: rgb(240, 158, 158);
         text-decoration: none;
+        transition: all ease 3s;
     }
     .barramenu__li--a{
         color:rgb(240, 158, 158);
@@ -289,6 +300,7 @@ footer {
         padding: 10px;
         position:relative;
         font-weight: 200;
+        transition: all ease 3s;
     }
     #btnmenu{
         border:0px;
