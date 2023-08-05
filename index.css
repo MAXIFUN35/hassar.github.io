@@ -84,6 +84,19 @@ img {
 }
 .titulo__nav--li {
     display:inline ;
+    box-sizing: border-box;
+}
+.titulo__nav--liC {
+    display:inline ;
+    box-sizing: border-box;
+}
+.titulo__nav--li :hover{
+    background-color: rgb(255, 157, 157);
+    border-radius: 3px;
+    color: white;
+    transition: all ease .4s;
+    box-sizing: border-box;
+
 }
 #contacto{
     cursor: pointer;
@@ -91,30 +104,28 @@ img {
 .titulo__nav--a1 {
     text-decoration: none;
     color: rgb(240, 158, 158);
-    font-size:1em;
+    font-size:.8em;
     font-weight: 500;
     padding: 7px;
-    border-left:1px solid;
-    border-color:  rgb(240, 158, 158);
 }
 .titulo__nav--a2 {
     text-decoration: none;
     color: rgb(240, 158, 158);
-    font-size:1em;
+    font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a3 {
     text-decoration: none;
     color: rgb(240, 158, 158);
-    font-size:1em;
+    font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a4 {
     text-decoration: none;
     color: rgb(240, 158, 158);
-    font-size:1em;
+    font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
