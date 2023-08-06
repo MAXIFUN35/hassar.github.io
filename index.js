@@ -1,5 +1,3 @@
-// hassar.js
-
 
 function onScroll() {
   var scrollPosition = window.scrollY;
@@ -28,7 +26,10 @@ function onScroll() {
 
 }
 window.addEventListener('scroll', onScroll);
+
+
 // contacto
+
 function scrollToSection() {
 
   var destinationElement = document.querySelector('#contacto1');
@@ -38,7 +39,11 @@ function scrollToSection() {
   });
 }
 document.getElementById('contacto').addEventListener('click', scrollToSection);
+
+
 // desplegable
+
+
 function isMobileDevice() {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
@@ -81,7 +86,7 @@ function isMobileDevice() {
   checkbox.addEventListener('change', function() {
     if(isMobileDevice){
      if (checkbox.checked) {
-      desplegable.style.height = '40vh';
+      desplegable.style.height = '50vh';
       desplegable.style.backgroundColor = 'white';
       desplegable.style.transition = 'ease .3s';
       menu.style.display = 'block';
@@ -103,31 +108,31 @@ document.addEventListener('click', function(event) {
     cerrarDesplegable();
   }
 });
-  });
-  function detectarDispositivoMovil() {
-    isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
-  
-  // Llamamos a la función de detección al cargar la página
-  detectarDispositivoMovil();
+ });
+function detectarDispositivoMovil() {
+      isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+ detectarDispositivoMovil();
   
 
-// observer
+// observer img12
 
-const div1 = document.getElementById('');
 
-const cargardiv1 = () => {
-  div1.style.backgroundColor = 'rgb(240, 158, 158)';
-  console.log('hola')
-  div1.style.transition = 'ease 10s'
-};
-
-const observador1 = new IntersectionObserver(cargardiv1, {
-  roo: null,
-  rootMargin: '-50%',
-  threshold: 0.1,
-
-});
-observador1.observe(div1);
+const img12 = document.getElementById('img12');
+const lorem = document.getElementById('Lorem')
+const cargarimg12 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      img12.style.animation = 'blur-in 0.6s linear both';
+      console.log('hola');
+      lorem.style.animation = 'blur-in 0.6s linear both';
+    }
+  })};
+    const observador1 = new IntersectionObserver(cargarimg12, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    });
+observador1.observe(img12);
 
 
