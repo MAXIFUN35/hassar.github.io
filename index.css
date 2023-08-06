@@ -7,6 +7,11 @@
 }
 html{
     background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll; /* Permite el desplazamiento vertical incluso cuando el contenido no desborda la ventana */
+    -webkit-backdrop-filter: blur(10px); /* Establece el filtro deseado, ajusta el valor de "blur" según lo prefieras */
+    backdrop-filter: blur(10px);
 }
 img {
         border-style: none;
@@ -24,6 +29,7 @@ img {
     background-position-x: center;
     background-origin: content-box;
     background-clip: content-box;
+    align-content: ;
 }
 .titulo {
     width:100%;
