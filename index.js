@@ -131,7 +131,7 @@ const cargarimg12 = (entries) => {
     const observador1 = new IntersectionObserver(cargarimg12, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.9,
     });
 observador1.observe(img12);
 
