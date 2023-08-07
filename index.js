@@ -14,12 +14,9 @@ function onScroll() {
     if (scrollPosition >= triggerPosition) {
         header.style.backgroundColor = 'white';
         header.style.background = 'white';
-        degrade.style.background = 'linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0))';
-
     } else {
         header.style.backgroundColor = 'transparent';
         header.style.animation = '.3s';
-        degrade.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.1),  rgba(0, 0, 0, 0.0))';
     }
   }
 
@@ -69,12 +66,10 @@ function isMobileDevice() {
       if (scrollPosition >= triggerPosition) {
           header.style.backgroundColor = 'white';
           desplegable.style.height = '3em';
-          degrade.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))';
       } else {
           header.style.backgroundColor = 'transparent';
           header.style.animation = '.3s';
           desplegable.style.height = '3em';
-          degrade.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .01))';
       }
     isDesplegableOpen = false;
         
@@ -136,29 +131,3 @@ const cargarimg12 = (entries) => {
 observador1.observe(img12);
 
 
-// lineas
-
-
-const linesContainer = document.querySelector(".article1");
-const lines = document.querySelectorAll(".linses");
-
-/**
- * Moves a set of lines horizontally on a webpage.
- */
-function moveLines() {
-  // Iterate over each line element
-  lines.forEach((line, index) => {
-    // Calculate the translation amount
-    const translation = index * 30;
-    
-    // Apply the translation to the line element
-    line.style.transform = `translateX(${translation}px)`;
-  });
-}
-
-function startAnimation() {
-  moveLines();
-  setInterval(moveLines, 5000); // Ajusta el tiempo para controlar la velocidad del movimiento
-}
-
-startAnimation();
