@@ -2,7 +2,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     text-decoration: none;
 }
 html{
@@ -20,8 +20,8 @@ img {
 }
 #background{
     position:fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -4;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(chocolate.jpg);
     background-size:cover;
@@ -29,7 +29,6 @@ img {
     background-position-x: center;
     background-origin: content-box;
     background-clip: content-box;
-    align-content: ;
 }
 .titulo {
     width:100%;
@@ -243,11 +242,13 @@ img {
     overflow: hidden;
     border-radius: 1em;
     opacity: 0;
-    cursor: pointer;
     transition: all .5s ease;
 }
 #img12:hover{
     transform: scale(1.1);
+}
+.section1__div2--img{
+    cursor: pointer;
 }
 .Lorem{
     opacity: 0;
@@ -259,10 +260,73 @@ img {
     transition: slideInFromLeft 1s ease;
 }
 @keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+.article1{
+    background-color: rgb(255, 255, 255);
+}
 .article1__div1{
     width: 100%;
-    height: 25em;
-    background-color: rgb(255, 255, 255);
+    height: 30em;
+    background-color: white;
+}
+.article1{
+}
+.producto__ul{
+    display: inline-block;
+    width: 100%;
+    list-style: none; /* Elimina los estilos de viñetas o números de la lista */
+    padding: 0; /* Elimina el espacio interior por defecto de la lista */
+    margin: 0; /* Elimina el espacio exterior por defecto de la lista */
+    display: flex;
+    flex-direction:column (5);
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
+}
+.article1__div2{
+    display: inline-block;
+    width: 15em;
+    height: 100%;
+    background-color: rgb(240, 158, 158);
+    overflow: hidden;
+    border-radius: 1em;
+    margin: .5em;
+    text-align: center;
+    transition: all ease .4s;
+}
+.article1__div2:hover{
+    transform: scale(1.2);
+}
+.article1__div2--img{
+    text-decoration: none;
+    display: block;
+    height: 15em;
+    width: 15em;
+    background-image: url(torta6.jpg);
+    background-size: cover;
+    color: transparent;
+    transition: all ease .3s;
+}
+.article1__div2--img:hover{
+    background-image: url(torta5.jpg);
+}
+.article1__div2--nombre{
+    text-decoration: none;
+    display: inline-block;
+}
+.rticle1__div2--precio{
+    display: inline-block;
+
+}
+.article1__div2--a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    width: 60%;
+}
+.article1__div2--btn{
+    background: none;
+    display: inline-block;
+    border: none;
+    width: 30%;
 }
 footer {
     background-color: rgb(85, 46, 46);
@@ -440,6 +504,7 @@ footer {
         display:block;
         width: 100%;
         margin: auto;
+        cursor: none !important
     }
     .Lorem{
         display: block;
@@ -449,6 +514,12 @@ footer {
         overflow: hidden;
         margin: auto;
         margin-bottom: 2em;
+    }
+    .article1__div2{
+        background-color: rgb(240, 158, 158);
+    }
+    .producto__ul{
+        flex-direction:column;
     }
     @keyframes rotateAnimation {
         0%{

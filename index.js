@@ -1,8 +1,8 @@
-
+// scroll para la barra superior
 function onScroll() {
   var scrollPosition = window.scrollY;
   const viewportHeight = window.innerHeight * 0.01;
-  const alturaEnVh = 20; // Puedes cambiar este valor a cualquier otra altura deseada
+  const alturaEnVh = 20;
   const alturaEnPixels = viewportHeight * alturaEnVh;
   var triggerPosition = 280; 
   var header = document.getElementById('titulo');
@@ -136,3 +136,29 @@ const cargarimg12 = (entries) => {
 observador1.observe(img12);
 
 
+// lineas
+
+
+const linesContainer = document.querySelector(".article1");
+const lines = document.querySelectorAll(".linses");
+
+/**
+ * Moves a set of lines horizontally on a webpage.
+ */
+function moveLines() {
+  // Iterate over each line element
+  lines.forEach((line, index) => {
+    // Calculate the translation amount
+    const translation = index * 30;
+    
+    // Apply the translation to the line element
+    line.style.transform = `translateX(${translation}px)`;
+  });
+}
+
+function startAnimation() {
+  moveLines();
+  setInterval(moveLines, 5000); // Ajusta el tiempo para controlar la velocidad del movimiento
+}
+
+startAnimation();
