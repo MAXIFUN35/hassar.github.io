@@ -250,14 +250,18 @@ img {
     transition: slideInFromLeft 1s ease;
 }
 @keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
-.article1{
-}
 .article2{
     height: 55em;
     text-align: center;
+    padding-top: 10em;
 }
 .article2__div1{
-    width: 70%;
+    background-attachment: fixed;
+    background-image: url('fondorosa.jpg');
+    background-position-x: 10%;
+    background-size: auto 130%;
+    background-repeat: repeat-y;
+    width: 80%;
     margin: 2em 0 2em 0;
     display: inline-block;
     height: 8em;
@@ -265,7 +269,21 @@ img {
     background-color: rgb(240, 158, 158);
     margin: auto;
 }
-.article2__div1--h3{
+.article2__div{
+    background-attachment: fixed;
+    background-image: url('fondorosa1.jpg');
+    background-position-x:90%;
+    background-size: auto 130%;
+    background-repeat: repeat-y;
+    background-clip:content-box;
+    width: 100%;
+    margin: 2em 0 2em 0;
+    display: inline-block;
+    height: 8em;
+    text-align: center;
+    margin: auto;
+}
+.article2__div--h3{
     color:rgb(94, 63, 42) ;
     padding-top: 2em;
     font-size: 1.5em;
@@ -384,9 +402,7 @@ footer {
         width: 50%;
         transition: all ease .3s;
     }
-
 }
-
 @media screen and (max-width: 778px) {
     .titulo{
         height: 3em;
@@ -446,7 +462,7 @@ footer {
         margin-left: 1.5em;
         position: absolute;
         justify-content: center;
-        margin-top: .7em;
+        margin-top: .6em;
     }
     .menu{
         display: none;
@@ -457,7 +473,7 @@ footer {
         transition: all ease 5s;
     }
     .barramenu__li{
-        padding: 1em 0;
+        padding: 1.7em 0;
         color: rgb(240, 158, 158);
         text-decoration: none;
         transition: all ease 3s;
@@ -565,6 +581,38 @@ footer {
     .producto__ul1{
         display:none;
     }
+    .article2__div1{
+        background-attachment: fixed;
+        background-image: url('fondorosa.jpg');
+        background-position-x: 5%;
+        background-size: auto 130%;
+        background-repeat: repeat-y;
+        width: 90%;
+        margin: 2em 0 2em 0;
+        display: inline-block;
+        height: 5em;
+        text-align: center;
+        background-color: rgb(240, 158, 158);
+        margin: auto;
+    }
+    .article2__div{
+        background-attachment: fixed;
+        background-image: url('fondorosa1.jpg');
+        background-position-x:95%;
+        background-size: auto 130%;
+        background-repeat: repeat-y;
+        background-clip:content-box;
+        width: 100%;
+        margin: 2em 0 2em 0;
+        display: inline-block;
+        height: 5em;
+        text-align: center;
+        margin: auto;
+    }
+    .article2__div--h3{
+        padding-top: 1em;
+        font-size: 1.5em;
+    }
     .article2__div2{
         display: inline-block;
         width: 80%;
@@ -576,10 +624,21 @@ footer {
         text-align: center;
         transition: all ease .4s;
     }
+    
     .article2__div2--img{
         background-size:cover ;
+        box-sizing:;
         top: 0;
-        height: 19em;   
+        height: 19em;
+        width: 100%;   
+        display: flex;
+        overflow: hidden;
+    }
+    .article2__div2--img1{
+        top: 0;
+        height: 19em;
+        object-fit: cover;
+        object-position: left;
     }
 }
 @media screen and (max-width: 260px){
