@@ -160,7 +160,7 @@ img {
     display: inline-block;
 }
 .div__div1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('torta3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta3.jpg');
     display: inline-block;
     width: 33VW;
     height: 70vh;
@@ -170,7 +170,7 @@ img {
     background-size: contain;
 }
 .div__div2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('torta4.jpg');    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta4.jpg');    
     display: inline-block;
     width: 33VW;
     height: 70vh;
@@ -180,7 +180,7 @@ img {
     background-size: contain;
 }
 .div__div3{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('torta5.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta5.jpg');
     display: inline-block;
     width: 33VW;
     height: 70vh;
@@ -195,7 +195,7 @@ img {
 .section1 {
     margin-top: -10px;
     height: 30em;
-    background-image:linear-gradient(rgba(0, 0, 0, .5 ), rgba(0, 0, 0, .7 )), url('chocolate.jpg') ;
+    background-image:linear-gradient(rgba(0, 0, 0, .5 ), rgba(0, 0, 0, .7 )), url('../media/chocolate.jpg') ;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -249,43 +249,43 @@ img {
     font-size: 1.5em;
     transition: slideInFromLeft 1s ease;
 }
-@keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
 .article2{
     height: 55em;
     text-align: center;
     padding-top: 10em;
 }
 .article2__div1{
-    background-attachment: fixed;
-    background-image: url('fondorosa.jpg');
-    background-position-x: 10%;
-    background-size: auto 130%;
-    background-repeat: repeat-y;
-    width: 80%;
+    background-attachment:local;
+    background-image: url('../media/lineapunteada.png');
+    background-position-x: 100%;
+    background-position-y: 5%;
+    background-size: 50%;
+    background-repeat: repeat-x;
+    width: 100%;
     margin: 2em 0 2em 0;
     display: inline-block;
-    height: 8em;
+    height: 5em;
     text-align: center;
     background-color: rgb(240, 158, 158);
     margin: auto;
 }
 .article2__div{
-    background-attachment: fixed;
-    background-image: url('fondorosa1.jpg');
-    background-position-x:90%;
-    background-size: auto 130%;
-    background-repeat: repeat-y;
-    background-clip:content-box;
+    background-attachment: local;
+    background-image: url('../media/lineapunteada.png');
+    background-position-y:95%;
+    background-size: 50%;
+    background-repeat: repeat-x;
     width: 100%;
     margin: 2em 0 2em 0;
     display: inline-block;
-    height: 8em;
+    height: 5em;
     text-align: center;
     margin: auto;
 }
 .article2__div--h3{
     color:rgb(94, 63, 42) ;
-    padding-top: 2em;
+    padding-top: 1.2em;
     font-size: 1.5em;
 }
 .producto__ul{
@@ -328,7 +328,7 @@ img {
     text-decoration: none;
     display: inline-block;
     height: 15em;
-    background-image: url(torta6.jpg);
+    background-image: url('../media/torta6.jpg');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -336,13 +336,15 @@ img {
     transition: all ease .3s;
 }
 .article2__div2--img:hover{
-    background-image: url(torta5.jpg);
+    background-image: url('../media/torta5.jpg');
 }
 .article2__div2--nombre{
     text-decoration: none;
+    color: rgb(94, 63, 42);
+    font-family: sriracha;
     display: inline-block;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 100;
 }
 .article2__div2--precio{
     display: block;
@@ -371,7 +373,7 @@ footer {
     text-align: center;
     display: inline-block;
     color:rgb(255, 255, 255);
-    background-image: url(tortachoco.jpg);
+    background-image: url('../media/tortachoco.jpg');
     background-size:contain;
     height: 30%;
     border-color: rgba(240, 248, 255, 0);
@@ -582,35 +584,27 @@ footer {
         display:none;
     }
     .article2__div1{
-        background-attachment: fixed;
-        background-image: url('fondorosa.jpg');
-        background-position-x: 5%;
-        background-size: auto 100%;
-        background-repeat: repeat-y;
-        width: 90%;
-        margin: 2em 0 2em 0;
-        display: inline-block;
-        height: 5em;
-        text-align: center;
-        background-color: rgb(240, 158, 158);
-        margin: auto;
-    }
-    .article2__div{
-        background-attachment: fixed;
-        background-image: url('fondorosa1.jpg');
-        background-position-x:95%;
-        background-size: auto 100%;
-        background-repeat: repeat-y;
-        background-clip:content-box;
+        background-size: 110%;
+        background-position-y: 5%;
         width: 100%;
         margin: 2em 0 2em 0;
         display: inline-block;
-        height: 5em;
+        height: 3em;
+        text-align: center;
+        margin: auto;
+    }
+    .article2__div{
+        background-size: 110%;
+        background-position-y:95%;
+        width: 100%;
+        margin: 2em 0 2em 0;
+        display: inline-block;
+        height: 3em;
         text-align: center;
         margin: auto;
     }
     .article2__div--h3{
-        padding-top: 2em;
+        padding-top: 1em;
         font-size: 1em;
     }
     .article2__div2{
@@ -618,7 +612,6 @@ footer {
         width: 80%;
         height: 100%;
         background-color: rgb(240, 158, 158);
-        background-position-x: ;
         overflow: hidden;
         margin: .5em;
         text-align: center;
@@ -627,7 +620,6 @@ footer {
     
     .article2__div2--img{
         background-size:cover ;
-        box-sizing:;
         top: 0;
         height: 19em;
         width: 100%;   
@@ -644,3 +636,23 @@ footer {
 @media screen and (max-width: 260px){
 }
 
+
+.slide-bottom2{animation:slide-bottom2 0.4s linear both}
+@keyframes slide-bottom2{
+    0%{
+        transform:translatey(50px);
+        filter:blur(1px);opacity:0;
+    }
+    100%{
+        transform:translatey(0px);
+        filter:blur(0);opacity:1;
+    }
+}
+@keyframes blur-in{
+    0%{
+        filter:blur(12px);opacity:0
+    }
+    100%{
+        filter:blur(0);opacity:1
+    }
+}

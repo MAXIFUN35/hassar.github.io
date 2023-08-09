@@ -130,4 +130,3 @@ const cargarimg12 = (entries) => {
     });
 observador1.observe(img12);
 
-
