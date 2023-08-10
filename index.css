@@ -21,11 +21,11 @@ img {
 .titulo {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;   
+    color: rgb(255, 255, 255);   
     display: inline-block;
     z-index: 5;
     position: fixed;
-    transition: all ease .3s;
+    transition: all ease .2s;
 }
 .titulo__nav {
    width:100%; 
@@ -62,14 +62,13 @@ img {
     display: inline;    
     text-align: left;
     margin-left:60px;
-    color:rgb(240, 158, 158);
+    transition: all ease 0s;
 }
 .titulo__nav--h1P {
     font-family: sans-serif  ;
     font-weight: 100;
     text-align: left;
     margin-left:-5px;
-    color:rgb(240, 158, 158);
     display: inline;
     background-color: transparent;
 }
@@ -102,40 +101,49 @@ img {
     background-color: rgb(255, 157, 157);
     border-radius: 3px;
     color: white;
-    transition: all ease .4s;
+    transition: all ease .2s;
     box-sizing: border-box;
 
 }
 #contacto{
     cursor: pointer;
 }
+#barramenu__a{
+    color: rgb(255, 255, 255);
+}
+#barramenu__a2{
+    color: rgb(255, 255, 255);
+}
+#barramenu__a3{
+    color: rgb(255, 255, 255);
+}
+#barramenu__a4{
+    color: rgb(255, 255, 255);
+}
 .titulo__nav--a1 {
     text-decoration: none;
-    color: rgb(240, 158, 158);
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a2 {
     text-decoration: none;
-    color: rgb(240, 158, 158);
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a3 {
     text-decoration: none;
-    color: rgb(240, 158, 158);
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a4 {
     text-decoration: none;
-    color: rgb(240, 158, 158);
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
+    cursor: pointer;
 }
 .titulo__nav--a5 {
     padding: 7px;
@@ -155,47 +163,33 @@ img {
     display: none;
 }
 .div{
-    height:50vh;
+    position: relative;
+    height:70vh;
     width: 100%;
     display: inline-block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('media/torta3.jpg');
+    background-position: center;
 }
-.div__div1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta3.jpg');
-    display: inline-block;
-    width: 33VW;
-    height: 70vh;
-    margin: -3PX;
-    background-position-y:center;
-    background-position-x:center;
-    background-size: contain;
+.div__div{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
 }
-.div__div2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta4.jpg');    
-    display: inline-block;
-    width: 33VW;
-    height: 70vh;
-    margin: -3PX;
-    background-position-y:center;
-    background-position-x:center;
-    background-size: contain;
-}
-.div__div3{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../media/torta5.jpg');
-    display: inline-block;
-    width: 33VW;
-    height: 70vh;
-    margin: -3PX;
-    background-size:contain;
-    background-position-y:center;
-    background-position-x:center;
-}
-.img_model{
-    display: none;
+.div__div--h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 4.3em;
+    margin-left: 2em;
+    font-weight: 900;
+    transition: all ease 0.2s;
+    animation:slide-top 0.5s linear both;
 }
 .section1 {
-    margin-top: -10px;
+    margin-top: -5px;
     height: 30em;
-    background-image:linear-gradient(rgba(0, 0, 0, .5 ), rgba(0, 0, 0, .7 )), url('../media/chocolate.jpg') ;
+    background-image:linear-gradient(rgba(0, 0, 0, .5 ), rgba(0, 0, 0, .7 )), url('media/chocolate.jpg') ;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -249,15 +243,26 @@ img {
     font-size: 1.5em;
     transition: slideInFromLeft 1s ease;
 }
-
 .article2{
     height: 55em;
     text-align: center;
-    padding-top: 10em;
+}
+.article2__div0{
+    display: inline-block;
+    height: 20em;
+    width: 100%;
+}
+.article2__div0--ul{
+    list-style: none;
+    display: inline-block;
+}
+.article2__div0--li{
+    display: inline-block;
+    margin: 3em;
 }
 .article2__div1{
     background-attachment:local;
-    background-image: url('../media/lineapunteada.png');
+    background-image: url('media/lineapunteada.png');
     background-position-x: 100%;
     background-position-y: 5%;
     background-size: 50%;
@@ -269,10 +274,11 @@ img {
     text-align: center;
     background-color: rgb(240, 158, 158);
     margin: auto;
+    margin-top: 1em;
 }
 .article2__div{
     background-attachment: local;
-    background-image: url('../media/lineapunteada.png');
+    background-image: url('media/lineapunteada.png');
     background-position-y:95%;
     background-size: 50%;
     background-repeat: repeat-x;
@@ -328,7 +334,7 @@ img {
     text-decoration: none;
     display: inline-block;
     height: 15em;
-    background-image: url('../media/torta6.jpg');
+    background-image: url('media/torta6.jpg');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -336,7 +342,7 @@ img {
     transition: all ease .3s;
 }
 .article2__div2--img:hover{
-    background-image: url('../media/torta5.jpg');
+    background-image: url('media/torta5.jpg');
 }
 .article2__div2--nombre{
     text-decoration: none;
@@ -373,7 +379,7 @@ footer {
     text-align: center;
     display: inline-block;
     color:rgb(255, 255, 255);
-    background-image: url('../media/tortachoco.jpg');
+    background-image: url('media/tortachoco.jpg');
     background-size:contain;
     height: 30%;
     border-color: rgba(240, 248, 255, 0);
@@ -403,6 +409,10 @@ footer {
     .titulo__nav--ul1{
         width: 50%;
         transition: all ease .3s;
+    }
+    .div__div--h2{
+        font-size: 2em;
+        margin-left: 1em
     }
 }
 @media screen and (max-width: 778px) {
@@ -518,29 +528,16 @@ footer {
         height: 50vh;
         overflow: hidden;
     }
-    .div__div1{
-        width: 100%;
-        height: 100%;
-        background-image: none;
-        transition: .5s ease;
-        display: flex;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    }
-    .div__div2{
-        display: none;
-        background-image: none;
-    }
-    .div__div3{
-        display: none;
-        background-image: none;
-    }
-    .img_model{
-        display: inline-block;
-        height: auto;
-        object-fit: cover;
+    .div__div--h2{
+        font-size: 1.4em;
+        margin-left: 1em;
     }
     .section1{
         display: block;
+    }
+    .b{
+        font-size: 1.6em;
+        padding-top: 1.4em;
     }
     .section1__div2{
         display: block;
@@ -654,5 +651,24 @@ footer {
     }
     100%{
         filter:blur(0);opacity:1
+    }
+}
+@keyframes blur-in2{
+    0%{
+        filter:blur(5px);opacity:0
+    }
+    100%{
+        filter:blur(0);opacity:1
+    }
+}
+.slide-top{animation:slide-top 0.4s linear both}
+@keyframes slide-top{
+    0%{
+        transform:translateY(20px);
+        filter:blur(5px);opacity:0;
+    }
+    100%{
+        transform:translateY(0px);
+        filter:blur(0);opacity:1;
     }
 }
