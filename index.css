@@ -1,5 +1,6 @@
 /*index*/
 * {
+    font-family: 'Bellota Text', cursive;
     padding: 0;
     margin: 0;
     font-family: Arial;
@@ -57,12 +58,14 @@ img {
     display: none;
 }
 .titulo__nav--h1 {
-    font-family: sriracha  ;
+    font-family: 'Hassar Regular'  ;
     font-weight: 100;
     display: inline;    
     text-align: left;
     margin-left:60px;
     transition: all ease 0s;
+    letter-spacing: -.2em;
+    font-size: 2em;
 }
 .titulo__nav--h1P {
     font-family: sans-serif  ;
@@ -100,7 +103,7 @@ img {
 .titulo__nav--li :hover{
     background-color: rgb(255, 157, 157);
     border-radius: 3px;
-    color: white;
+    color: rgb(255, 255, 255) !important;
     transition: all ease .2s;
     box-sizing: border-box;
 
@@ -121,24 +124,28 @@ img {
     color: rgb(255, 255, 255);
 }
 .titulo__nav--a1 {
+    font-family: 'Bellota Text', cursive;
     text-decoration: none;
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a2 {
+    font-family: 'Bellota Text', cursive;
     text-decoration: none;
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a3 {
+    font-family: 'Bellota Text', cursive;
     text-decoration: none;
     font-size:.8em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a4 {
+    font-family: 'Bellota Text', cursive;
     text-decoration: none;
     font-size:.8em;
     font-weight: 500;
@@ -151,8 +158,8 @@ img {
     cursor: pointer;
     position: relative;
 }
-.titulo__nav--a  :hover{
-    color: rgb(250, 158, 158);
+.titulo__nav--a  :over{
+    color: rgb(255, 255, 255);
     border-radius: 10px;
     border-width: 1em;
     border: 2px solid;
@@ -167,8 +174,8 @@ img {
     height:70vh;
     width: 100%;
     display: inline-block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('media/torta3.jpg');
     background-position: center;
+    transition: all .5s ease-in-out;
 }
 .div__div{
     overflow: hidden;
@@ -178,7 +185,7 @@ img {
     bottom: 0;
 }
 .div__div--h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Bellota Text', cursive;
     color: white;
     font-size: 4.3em;
     margin-left: 2em;
@@ -239,7 +246,7 @@ img {
     display: inline-block;
     width: 20em;
     font-weight: 100;
-    font-family: sans-serif;
+    font-family: 'Bellota Text', cursive;
     font-size: 1.5em;
     transition: slideInFromLeft 1s ease;
 }
@@ -248,17 +255,80 @@ img {
     text-align: center;
 }
 .article2__div0{
+    overflow: hidden;
     display: inline-block;
-    height: 20em;
+    height: 25em;
     width: 100%;
 }
 .article2__div0--ul{
     list-style: none;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
 }
-.article2__div0--li{
+.article2__div0--li1{
+    clip-path: polygon(0% 0, 100% 0%, 85% 100%, 0% 100%);
+    background-image:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),url('media/torta8.jpg');
+    background-position: center;
+    background-size: cover;
     display: inline-block;
-    margin: 3em;
+    margin: 2em 0 1em -5em;
+    height: 20em;
+    width: 40em;
+    text-align: left;
+    align-items: center;
+}
+.article2__div0--li2{
+    text-align: center;
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),url('media/torta6.jpg');
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin: 2em 0 1em -3em;
+    height: 20em;
+    width: 40em;
+}
+.article2__div0--li3{
+    text-align: center;
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),url('media/torta2.jpg');
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin: 2em 0 1em -3em;
+    height: 20em;
+    width: 40em;
+}
+.article2__div0--li4{
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)),url('media/torta7.jpg');
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin: 2em -3em 1em -3em;
+    height: 20em;
+    width: 40em;
+    text-align: center;
+}
+.article2__div0--p{
+    margin-top:20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 800;
 }
 .article2__div1{
     background-attachment:local;
@@ -347,16 +417,19 @@ img {
 .article2__div2--nombre{
     text-decoration: none;
     color: rgb(94, 63, 42);
-    font-family: sriracha;
+    font-family: 'Bellota Text';
     display: inline-block;
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 500;
 }
 .article2__div2--precio{
-    display: block;
+    font-family: 'Bellota Text', cursive;
+    display: inline-block;
     font-size: .7em;
-    font-weight: 100;
-    opacity: .7;
+    width: 90%;
+    margin: auto;
+    font-weight: 600;
+    opacity: .8;
 }
 .article2__div2--a{
     font-family: sans-serif;
@@ -435,15 +508,20 @@ footer {
         align-items: center;
     }
     .titulo__nav--h1-2 {
-        font-family: sriracha;
+        font-family:'Hassar Regular';
+        letter-spacing: -.2em;
         font-weight: 100;
         display: inline-block;    
         color:rgb(240, 158, 158);
         width:fit-content;
         height: fit-content;
         margin: auto;
+        margin-top: .3em;
+        font-size: 1.3em;
     }
     .titulo__nav--h1P-2 {
+        font-size: 1.3em;
+        margin-top: .2em;
         font-family: sans-serif  ;
         font-weight: 100;
         color:rgb(240, 158, 158);
@@ -671,4 +749,8 @@ footer {
         transform:translateY(0px);
         filter:blur(0);opacity:1;
     }
+}
+@font-face {
+    font-family: 'Hassar Regular';
+    src: url(Hassar-Regular.ttf);
 }

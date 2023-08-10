@@ -94,7 +94,6 @@ function isMobileDevice() {
   const menu = document.getElementById('menu');
   let isDesplegableOpen = false;
   var degrade = document.getElementById('titulo__nav');
-  
 
   function cerrarDesplegable() {
     desplegable.style.height = '3em';
@@ -174,3 +173,25 @@ const cargarimg12 = (entries) => {
     });
 observador1.observe(img12);
 
+
+// rotacion automatica
+
+
+const imageUrls = [
+  'media/torta2.jpg',
+  'media/torta3.jpg',
+  'media/torta4.jpg'
+]; // Agrega aquí las URL de las imágenes
+
+const imageContainer = document.getElementById('img11');
+let currentIndex = 0;
+
+function changeBackgroundImage() {
+  imageContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${imageUrls[currentIndex]})`;
+  imageContainer.style.transition = 'slide-top 0.5s linear both'
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+}
+
+changeBackgroundImage(); // Cambia la imagen al cargar la página
+
+setInterval(changeBackgroundImage, 4000);
