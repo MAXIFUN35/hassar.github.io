@@ -187,11 +187,11 @@ const imageContainer = document.getElementById('img11');
 let currentIndex = 0;
 
 function changeBackgroundImage() {
-  imageContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${imageUrls[currentIndex]})`;
+  imageContainer.style.backgroundImage = `url(${imageUrls[currentIndex]})`;
   imageContainer.style.transition = 'slide-top 0.5s linear both'
   currentIndex = (currentIndex + 1) % imageUrls.length;
 }
 
 changeBackgroundImage(); // Cambia la imagen al cargar la página
 
-setInterval(changeBackgroundImage, 4000);
+setInterval(changeBackgroundImage, 5000);

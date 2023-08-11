@@ -126,28 +126,28 @@ img {
 .titulo__nav--a1 {
     font-family: 'Bellota Text', cursive;
     text-decoration: none;
-    font-size:.8em;
+    font-size:.9em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a2 {
     font-family: 'Bellota Text', cursive;
     text-decoration: none;
-    font-size:.8em;
+    font-size:.9em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a3 {
     font-family: 'Bellota Text', cursive;
     text-decoration: none;
-    font-size:.8em;
+    font-size:.9em;
     font-weight: 500;
     padding: 7px;
 }
 .titulo__nav--a4 {
     font-family: 'Bellota Text', cursive;
     text-decoration: none;
-    font-size:.8em;
+    font-size:.9em;
     font-weight: 500;
     padding: 7px;
     cursor: pointer;
@@ -171,18 +171,20 @@ img {
 }
 .div{
     position: relative;
-    height:70vh;
+    height:85vh;
     width: 100%;
     display: inline-block;
     background-position: center;
     transition: all .5s ease-in-out;
 }
 .div__div{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .div__div--h2{
     font-family: 'Bellota Text', cursive;
@@ -524,7 +526,7 @@ footer {
         font-size: 1.3em;
         margin-top: .2em;
         font-family: sans-serif  ;
-        font-weight: 100;
+        font-weight: 600;
         color:rgb(240, 158, 158);
         display: inline-block;
         margin-left:4px;
@@ -609,7 +611,7 @@ footer {
         overflow: hidden;
     }
     .div__div--h2{
-        font-size: 1.4em;
+        font-size: 2em;
         margin-left: 1em;
     }
     .section1{
@@ -694,7 +696,9 @@ footer {
         text-align: center;
         transition: all ease .4s;
     }
-    
+    .article2__div2:hover{
+        transform: scale(1);
+    }
     .article2__div2--img{
         background-size:cover ;
         top: 0;
