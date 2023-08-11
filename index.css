@@ -490,6 +490,7 @@ footer {
 }
 @media screen and (max-width: 778px) {
     .titulo{
+        position: fixed;
         height: 3em;
         overflow: hidden;
     }
@@ -510,7 +511,7 @@ footer {
     .titulo__nav--h1-2 {
         font-family:'Hassar Regular';
         letter-spacing: -.2em;
-        font-weight: 100;
+        font-weight: 400;
         display: inline-block;    
         color:rgb(240, 158, 158);
         width:fit-content;
@@ -526,6 +527,7 @@ footer {
         font-weight: 100;
         color:rgb(240, 158, 158);
         display: inline-block;
+        margin-left:4px;
     }
     .titulo__nav--li {
         display: none; /* Ocultar el menú en pantallas pequeñas */
