@@ -526,7 +526,7 @@ footer {
         font-size: 1.3em;
         margin-top: .2em;
         font-family: sans-serif  ;
-        font-weight: 600;
+        font-weight: 100;
         color:rgb(240, 158, 158);
         display: inline-block;
         margin-left:4px;
@@ -628,7 +628,7 @@ footer {
         height: 85vh;
     }
     #img12{
-        width: 80%;
+        width: 60%;
         height: auto;
     }
     .section1__div2--img{
@@ -649,21 +649,22 @@ footer {
     }
     .article2{
         overflow:hidden;
-        height: 180em;
+        height: 170em;
         display: grid;
         grid-template-columns: column(1);
         align-items: center;
     }
     .article2__div0{
-        margin-top: 5em;
-        height: 30em;
+        height: 35em;
     }
     .article2__div0--ul{
         display: none;
     }
     .article2__div0--ul-2{
+        margin-top: -3em;
         display: grid;
         columns: 1;
+        transition: all .1s ease;
     }
     .article2__div0--li1-2{
         clip-path: polygon(0% 0, 100% 0%, 100% 70%, 0% 100%);
@@ -676,6 +677,8 @@ footer {
         background-color: rgb(253, 231, 131);
         height: 4em;
         justify-content: center;
+        transition: all .5s ease;
+        transform:translate3d(0, 0, 0) ;
     }
     .article2__div0--li2-2{
         margin-top: -1.5em;
@@ -689,9 +692,10 @@ footer {
         height: 4em;
         background-color: rgb(240, 158, 158);
 
-    }.article2__div0--li3-2{
-        background-attachment: local;
-        transform: translateZ(0);
+    }
+    .article2__div0--li3-2{
+        background-size: cover;
+        transform: translate3d(0, 0, 0); 
         background-position: center center;
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5)), url('media/chocolate.jpg') ;
         clip-path: polygon(0% 0, 100% 16%, 100% 90%, 0% 100%);
@@ -718,7 +722,7 @@ footer {
         background-color: rgb(85, 46, 46);
     }
     .article2__div0--p-2{
-        
+        transform: translate3d(0, 0, 0);
     }
     .article2__div2{
         background-color: rgb(240, 158, 158);

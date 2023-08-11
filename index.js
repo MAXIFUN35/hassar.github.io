@@ -195,3 +195,26 @@ function changeBackgroundImage() {
 changeBackgroundImage(); // Cambia la imagen al cargar la página
 
 setInterval(changeBackgroundImage, 5000);
+
+
+// parrallax
+
+
+// const parallaxBg = document.querySelector('.article2__div0--p-2');
+
+// window.addEventListener('scroll', () => {
+  // const yOffset = window.pageYOffset;
+  // parallaxBg.style.transform = `translateY(-${pageYOffset * 0.1}px)`; /* Ajusta el factor de velocidad */
+// });
+
+
+
+const parallaxItems = document.querySelectorAll('.article2__div0--ul-2');
+
+document.addEventListener('scroll', function() {
+  const yOffset = window.pageYOffset;
+  parallaxItems.forEach(item => {
+    const parallaxOffset = yOffset * 0.1; /* Ajusta el factor de velocidad */
+    item.style.transform = `translateY(${parallaxOffset}px)`;
+  });
+});
