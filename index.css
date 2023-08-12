@@ -744,7 +744,7 @@ footer {
         height: 85vh;
     }
     #img12{
-        width: 80%;
+        width: 18em;
         height: auto;
     }
     .section1__div2--img{
@@ -916,9 +916,6 @@ footer {
     .footer__div2{
         display: none;
     }
-    .footer__div3{
-        margin-left: 1em;
-    }
     .footer__div3--h3{
         margin-top: 1em;
     }
@@ -932,6 +929,7 @@ footer {
         display: none;
     }
     #whaticon2{
+        opacity: 0;
         display: block;
         width: 4em;
         height: 4em;
@@ -939,19 +937,15 @@ footer {
     .whatimg2{
         position: fixed;
         z-index: 100;
-        margin-top: 89vh;
         transition: all .2s ;
-        margin-left: 77%;
+        bottom: .5em;
+        right: .5em;
     }
     .whaticon2{
         background-image: url('media/whatbuttoncelverde.png');
         background-size: contain;
         transition: all .2s ;
         background-repeat: no-repeat;
-    }
-    .whaticon2:hover{
-        background-image: url('media/WhatsAppButtonWhiteLarge.svg');
-        transition: all .2s ;
     }
     
 }
