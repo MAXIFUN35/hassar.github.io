@@ -732,7 +732,7 @@ footer {
     }
     .section1{
         display: block;
-        height: 100vh;
+        height: 70vh;
     }
     .b{
         font-size: 1.6em;
@@ -744,8 +744,8 @@ footer {
         height: 85vh;
     }
     #img12{
-        width: 18em;
-        height: auto;
+        width: auto;
+        height: 30vh;
     }
     .section1__div2--img{
         display:block;
