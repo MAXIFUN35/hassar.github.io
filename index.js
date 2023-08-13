@@ -83,11 +83,13 @@ function onScroll1() {
 
 }
 window.addEventListener('scroll', onScroll1);
+
+
 // contacto
 
 function scrollToSection() {
 
-  var destinationElement = document.querySelector('#contacto1');
+  var destinationElement = document.getElementById('contacto1');
 
   destinationElement.scrollIntoView({
       behavior: 'smooth' 
@@ -108,10 +110,12 @@ function isMobileDevice() {
   const menu = document.getElementById('menu');
   let isDesplegableOpen = false;
   var degrade = document.getElementById('titulo__nav');
+  const opaco = document.getElementById('opaco');
 
   function cerrarDesplegable() {
+    opaco.style.display = 'none'
     desplegable.style.height = '3.5em';
-    menu.style.display = 'grid';
+    menu.style.display = 'none';
     var scrollPosition = window.scrollY;
     var triggerPosition = 180; 
     var eslogan = document.getElementById('titulo');
@@ -125,7 +129,7 @@ function isMobileDevice() {
           desplegable.style.height = '3.5em';
       } else {
           eslogan.style.backgroundColor = 'transparent';
-          eslogan.style.animation = '.3s';
+          eslogan.style.animation = '.2s';
           desplegable.style.height = '3.5em';
       }
     isDesplegableOpen = false;
@@ -138,9 +142,11 @@ function isMobileDevice() {
   checkbox.addEventListener('change', function() {
     if(isMobileDevice){
      if (checkbox.checked) {
+      opaco.style.display = 'block';
+      opaco.style.transition = '1s';
       desplegable.style.height = '50vh';
       desplegable.style.backgroundColor = 'white';
-      desplegable.style.transition = 'ease-in .3s';
+      desplegable.style.transition = 'ease .2s';
       menu.style.display = 'grid';
       isDesplegableOpen = true;
       degrade.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0))';
