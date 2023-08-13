@@ -129,7 +129,7 @@ function isMobileDevice() {
           desplegable.style.height = '3.5em';
       } else {
           eslogan.style.backgroundColor = 'transparent';
-          eslogan.style.animation = '.2s';
+          eslogan.style.animation = '.3s';
           desplegable.style.height = '3.5em';
       }
     isDesplegableOpen = false;
@@ -146,7 +146,7 @@ function isMobileDevice() {
       opaco.style.transition = '1s';
       desplegable.style.height = '50vh';
       desplegable.style.backgroundColor = 'white';
-      desplegable.style.transition = 'ease .2s';
+      desplegable.style.transition = 'ease .3s';
       menu.style.display = 'grid';
       isDesplegableOpen = true;
       degrade.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0))';
@@ -241,22 +241,3 @@ document.addEventListener('scroll', function() {
 
 
 
-// whatimg
-
-
-const whatsappButton = document.querySelector('.whatimg');
-const whatsappIcon = whatsappButton.querySelector('.whatsapp-icon');
-
-whatsappButton.addEventListener('mouseenter', () => {
-  whatsappIcon.style.transform = 'scale(1.2)'; // Cambia el tamaño en hover
-  setTimeout(() => {
-    whatsappIcon.src = 'nueva-imagen-de-whatsapp.png'; // Cambia la imagen con un retraso
-  }, 300); // Retraso en milisegundos
-});
-
-whatsappButton.addEventListener('mouseleave', () => {
-  whatsappIcon.style.transform = 'scale(1)'; // Restaura el tamaño en salida
-  setTimeout(() => {
-    whatsappIcon.src = 'icono-de-whatsapp.png'; // Restaura la imagen con un retraso
-  }, 300); // Retraso en milisegundos
-});

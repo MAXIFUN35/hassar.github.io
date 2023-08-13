@@ -24,7 +24,7 @@ img {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
-    z-index: 4;
+    z-index: 5;
     display: none;
     transition: all ease 1s;
 }
@@ -33,7 +33,7 @@ img {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);   
     display: inline-block;
-    z-index: 5;
+    z-index: 10;
     position: fixed;
     transition: all ease .2s;
 }
@@ -51,7 +51,7 @@ img {
 .titulo__nav--ul1 {
     text-align: left;
     display: inline-block;
-    width: 35%;
+    width: 50%;
     transition: all ease .3s;
 }
 #menu{
@@ -611,7 +611,7 @@ footer {
     position: fixed;
     margin-top: 90vh;
     margin-left: 82vw;
-    z-index: 100;
+    z-index: 3;
     transition: all .2s ;
 }
 .whaticon{
@@ -626,7 +626,7 @@ footer {
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
 @media screen and (max-width: 860px){
     .titulo__nav--ul1{
-        width: 50%;
+        width: 60%;
         transition: all ease .3s;
     }
     .div__div--h2{
