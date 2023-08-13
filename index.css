@@ -609,12 +609,8 @@ footer {
 @media screen and (max-width: 778px) {
     .titulo{
         position: fixed;
-        height: 3em;
+        height: 3.5em;
         overflow: hidden;
-    }
-    .titulo__nav{
-        padding-top: .5vh;
-        padding-bottom: .5vh;
     }
     .titulo__nav--ul {
         text-decoration: none;
@@ -622,27 +618,23 @@ footer {
     .titulo__nav--ul1 {
         text-align: center;
         width: 100%;
-        display:flexbox;
-        justify-content: center;
         align-items: center;
     }
     .titulo__nav--h1-2 {
         font-family:'Hassar Regular';
         letter-spacing: -.2em;
-        font-weight: 400;
+        font-weight: 600;
         display: inline-block;    
         color:rgb(240, 158, 158);
         width:fit-content;
         height: fit-content;
         margin: auto;
-        margin-top: .3em;
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     .titulo__nav--h1P-2 {
-        font-size: 1.3em;
-        margin-top: .2em;
+        font-size: 1.5em;
         font-family: sans-serif  ;
-        font-weight: 100;
+        font-weight: 600;
         color:rgb(240, 158, 158);
         display: inline-block;
         margin-left:4px;
@@ -656,7 +648,7 @@ footer {
     .titulo__nav--liC2{
         display:inline;
         position: fixed;
-        padding: .5em 1em;
+        padding: 0em 1em;
         right: 0;
     }
     .titulo__nav--h1 {
@@ -672,10 +664,14 @@ footer {
         margin-left: 1.5em;
         position: absolute;
         justify-content: center;
-        margin-top: .6em;
     }
     .menu{
-        display: none;
+        height: 40vh;
+        list-style: none;
+        display:none;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
         padding: 0;
         transition: all ease 3s;
     }
@@ -683,16 +679,14 @@ footer {
         transition: all ease 5s;
     }
     .barramenu__li{
-        padding: 1.7em 0;
         color: rgb(240, 158, 158);
         text-decoration: none;
         transition: all ease 3s;
     }
     .barramenu__li--a{
         color:rgb(240, 158, 158);
-        display: inline-block;
+        display: inline;
         padding: 10px;
-        position:relative;
         font-weight: 200;
         transition: all ease 3s;
     }
@@ -731,6 +725,7 @@ footer {
         margin-left: 1em;
     }
     .section1{
+        background-image: none;
         display: block;
         height: 70vh;
     }
@@ -739,23 +734,26 @@ footer {
         padding-top: 1.4em;
     }
     .section1__div2{
-        display: block;
-        text-align: center;
-        height: 85vh;
+        display: flex;
+        text-align: justify;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
-    #img12{
+    #img12{ 
         width: auto;
         height: 30vh;
     }
     .section1__div2--img{
-        display:block;
+        display:inline-block;
         width: 100%;
         margin: auto;
         cursor: none !important
     }
     .Lorem{
+        color: black;
         display: block;
-        font-size: 1em;
+        font-size: 1.4em;
         font-weight: 100;
         font-family: system-ui;
         overflow: hidden;
@@ -764,8 +762,9 @@ footer {
         width: 80%;
     }
     .article2{
+        margin-top: 10em;
         overflow:hidden;
-        height: 170em;
+        height: auto;
         display: grid;
         grid-template-columns: column(1);
         align-items: center;
