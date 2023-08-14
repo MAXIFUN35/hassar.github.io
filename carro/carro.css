@@ -63,7 +63,11 @@ img {
 .titulo__nav--h1{
     display: none;
 }
+.titulo__nav--atras{
+    display: none;
+}
 .titulo__nav--a1 {
+    color: rgb(240, 158, 158);
     font-family: 'Bellota Text', cursive;
     text-decoration: none;
     font-size:1.2em;
@@ -87,9 +91,6 @@ img {
     border: 2px solid;
     border-color:rgb(240, 158, 158) ;
     transition: border 1s;
-}
-.licheck{
-    display: none;
 }
 .div1{
     padding-top:6em;
@@ -158,19 +159,6 @@ img {
 
 
 
-#menu{
-    display: none;
-}
-.menu__li{
-    display: none;
-}
-.barramenu__li--a{
-    display: none;
-}
-.titulo__nav--img{
-    display: none;
-}
-
 @media screen and (max-width: 860px){
     .titulo__nav--ul1{
         width: 60%;
@@ -205,12 +193,19 @@ img {
     .titulo__nav--li1 {
         display: none; /* Ocultar el menú en pantallas pequeñas */
     }
-    .titulo__nav--img{
-        display: inline-block;
+    .titulo__nav--atras{
+        color: rgb(240, 158, 158);
+        display: flex;
         padding: 0 0;
         margin-left: 1.5em;
+        margin-top: 1em;
         position: absolute;
         justify-content: center;
+    }
+    .atras__a{
+        color: rgb(240, 158, 158);
+        font-size:1.1em;
+        font-weight: 600;
     }
     .titulo__nav--h1{
         display:flex;
@@ -218,47 +213,6 @@ img {
         justify-content: center;
         height: 100%;
         align-items: center;
-    }
-    .menu{
-        height: 40vh;
-        list-style: none;
-        display:none;
-        text-align: left;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        transition: all ease 3s;
-    }
-    #menuli{
-        transition: all ease 5s;
-    }
-    .barramenu__li{
-        color: rgb(240, 158, 158);
-        text-decoration: none;
-        transition: all ease 3s;
-    }
-    .barramenu__li--a{
-        color:rgb(240, 158, 158);
-        display: inline;
-        padding: 10px;
-        font-weight: 200;
-        transition: all ease 3s;
-    }
-    #btnmenu{
-        border:0px;
-        background-color: transparent;
-    }
-    .barramenu{
-        display: inline-block;
-        height: 1.3em;
-        margin-top: 1em;
-        transition: all ease .5s;
-        transform: 0.3s;
-    }
-    .licheck{
-        display:inline;
-        position: fixed;
-        opacity: 0;
     }
     .titulo__nav--h1 {
         margin: auto;
