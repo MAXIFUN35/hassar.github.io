@@ -111,9 +111,18 @@ function isMobileDevice() {
   let isDesplegableOpen = false;
   var degrade = document.getElementById('titulo__nav');
   const opaco = document.getElementById('opaco');
+  const whaticon = document.getElementById('whaticon')
+  const whaticon2 = document.getElementById('whaticon2')
 
   function cerrarDesplegable() {
-    opaco.style.display = 'none'
+    whaticon.style.opacity = '1';
+    whaticon.style.transition = 'none';
+    whaticon.style.animation = 'slide-left 0.3s linear both';
+    whaticon2.style.opacity = '1';
+    whaticon2.style.transition = 'none';
+    whaticon2.style.animation = 'slide-left 0.3s linear both';
+    opaco.style.zIndex = '-1';
+    opaco.style.opacity = '0'
     desplegable.style.height = '3.5em';
     menu.style.display = 'none';
     var scrollPosition = window.scrollY;
@@ -142,8 +151,15 @@ function isMobileDevice() {
   checkbox.addEventListener('change', function() {
     if(isMobileDevice){
      if (checkbox.checked) {
-      opaco.style.display = 'block';
-      opaco.style.transition = '1s';
+      whaticon.style.opacity = '0';
+      whaticon.style.transition = 'all ease 3s';
+      whaticon.style.animation = 'slide-left2 0.3s linear both';
+      whaticon2.style.opacity = '0';
+      whaticon2.style.transition = 'all ease 3s';
+      whaticon2.style.animation = 'slide-left2 0.5s linear both';
+      opaco.style.zIndex = '5';
+      opaco.style.bottom = '0';
+      opaco.style.opacity = '.7'
       desplegable.style.height = '50vh';
       desplegable.style.backgroundColor = 'white';
       desplegable.style.transition = 'ease .3s';
