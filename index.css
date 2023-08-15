@@ -227,7 +227,7 @@ img {
 }
 .section1__div1{
     width: 100%;
-    background-color: rgb(253, 231, 131);
+    background-color: #f5f5dc; /*cambio 1*/
     display: inline-block;
     height: 6em;
     color: rgb(94, 63, 42);
@@ -267,7 +267,7 @@ img {
     cursor: pointer;
 }
 .Lorem{
-    opacity: 0;
+    opacity: 1;
     display: inline-block;
     width: 20em;
     font-weight: 100;
@@ -416,7 +416,7 @@ img {
     flex-direction: column;
     width: 15em;
     height: 22em;
-    background-color: rgb(240, 158, 158);
+    background-color: #f5f5dc;
     overflow: hidden;
     margin: .5em;
     text-align: center;
@@ -460,7 +460,7 @@ img {
     font-family: sans-serif;
     font-weight: 500;
     font-size: 1.1em;
-    background: rgb(253, 231, 131);
+    background: rgb(240, 158, 158);
     text-decoration: none;
     display: block;
     color: rgb(94, 63, 42);
@@ -474,7 +474,7 @@ img {
 }
 .article2__div2--a:hover{
     transition: all ease-in .2s;
-    color: rgb(253, 231, 131);
+    color: #f5f5dc;
     background: rgb(94, 63, 42);
 }
 @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
@@ -819,7 +819,7 @@ footer {
         font-size: 1.2em;
         font-weight: 600;
         color: rgb(85, 46, 46);
-        background-color: rgb(253, 231, 131);
+        background-color: #f5f5dc;
         height: 4em;
         justify-content: center;
         transition: all .5s ease;
@@ -862,15 +862,12 @@ footer {
         padding: 1em .5em 1em .5em;
         font-size: 1.2em;
         font-weight: 600;
-        color: rgb(253, 231, 131);
+        color: #f5f5dc;
         height: 4em;
         background-color: rgb(85, 46, 46);
     }
     .article2__div0--p-2{
         transform: translate3d(0, 0, 0);
-    }
-    .article2__div2{
-        background-color: rgb(240, 158, 158);
     }
     .producto__ul{
         flex-direction:column;
@@ -907,7 +904,7 @@ footer {
         display: inline-block;
         width: 80%;
         height: 100%;
-        background-color: rgb(240, 158, 158);
+        background-color: #f5f5dc;
         overflow: hidden;
         margin: .5em;
         text-align: center;

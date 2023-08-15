@@ -193,13 +193,11 @@ function detectarDispositivoMovil() {
 
 
 const img12 = document.getElementById('img12');
-const lorem = document.getElementById('Lorem')
 const cargarimg12 = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       img12.style.animation = 'blur-in 0.6s linear both';
       console.log('hola');
-      lorem.style.animation = 'blur-in 0.6s linear both';
     }
   })};
     const observador1 = new IntersectionObserver(cargarimg12, {
