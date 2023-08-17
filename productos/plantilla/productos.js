@@ -122,3 +122,5 @@ function ejecutarAnimacion() {
 
 ejecutarAnimacion(); // Ejecuta la animación al cargar la página
 setInterval(ejecutarAnimacion, 5000); // Ejecuta la animación cada 5 segundos
+
+//

@@ -252,7 +252,7 @@ img {
     animation:tracking-in-expand 0.4s linear both;
     margin-left: 10px;
     font-family: 'Bellota Text';
-    font-size: 2.5em;
+    font-size: 2em;
 }
 .datos__h3{
     margin-left: 10px;
@@ -269,6 +269,7 @@ img {
     width: 20em;
     margin-left: 1em;
     margin-right: 1em;
+    font-family: 'Bellota Text';
 }
 .datos__boton{
     display: flex;
@@ -530,12 +531,46 @@ img {
         justify-content: center;
     }
     .div-img0{
+        position: relative;
+        display: flex;
+        flex-direction: row;
         width: 90%;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    :active,
+    :hover {
+    -webkit-tap-highlight-color: transparent;
     }
     .img0{
+        left: 0;
+        width: 100%;
+        position: sticky;
         object-fit: cover;
-        height:100%;
+        height:20em;
         animation:blur-in 0.4s linear both;
+        scroll-snap-align: center;
+    }
+    .nav__img{
+        height: 1em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction:row ;
+        transition: all .3s ease;
+    }
+    .nav__img a:active{
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .nav__img i{
+        color: black;
+        transition: all .3s ease;
+        display: inline-block;
+        margin: 0 .2em;
     }
     .datos0{
         display: flex;
@@ -544,17 +579,19 @@ img {
         flex-wrap: nowrap;
     }
     .datos__h20{
+        width: 90%;
         animation:tracking-in-expand 0.4s linear both;
         margin-left: 10px;
         font-family: 'Bellota Text';
-        font-size: 2em;
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin: 1em auto;
     }
     .datos__h30{
-        margin-left: 10px;
+        width: 90%;
+        margin: 0 auto 1em auto;
         font-family: 'Bellota Text';
         font-size: 2em;
-        margin-top: 1em;
-        padding-bottom: 1em;
     }
     .descripcion0{
         font-family: 'Bellota Text';
