@@ -640,6 +640,11 @@ footer {
     }
 }
 @media screen and (max-width: 778px) {
+    :active,
+    :hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none; /* Eliminar el contorno al hacer clic */
+    }
     .titulo{
         position: fixed;
         height: 3.5em;
