@@ -195,6 +195,21 @@ img {
 .licheck{
     display: none;
 }
+.div__libre{
+    height: 40%;
+    width: 100%;
+    background-color: #f5f5dc;
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    display: none;
+
+}
+.div__libre2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
 .div{
     position: relative;
     height:85vh;
@@ -481,6 +496,127 @@ img {
     background: rgb(94, 63, 42);
 }
 @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
+
+.article3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30em;
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+}
+.article3__div1{
+    display: flex;
+    opacity: 1;
+    transition: all .3s linear;
+    justify-content: center;
+    height: 90%;
+    flex-direction: row-reverse;
+    background: #f5f5dc;
+    width: 80%;
+}
+.article3__div2{
+    display: flex;
+    margin-top: 2em;
+    text-align: center;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+}
+.article3__div2--h3{
+    font-family: 'Bellota Text';
+    font-size: 1.7em;
+    font-weight: 700;
+    justify-self: baseline;
+}
+.article3__div2--p{
+    font-family: 'Bellota Text';
+    font-weight: 100;
+    font-size: 1.5em;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:70%;
+}
+.mail{
+    height: 1.4em;
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family: 'Bellota Text';
+    border: 5px solid rgb(100, 73, 52) ;
+    margin: 0;
+    width: 60%;
+    background-color: transparent;
+    padding: .2em;
+    outline: none;
+}
+.p{
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    margin-top: auto;
+    font-family: 'Bellota Text';
+    font-size: .8em;
+    font-weight: 600;
+}
+.text{
+    height: 1.4em;
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family: 'Bellota Text';
+    border: 5px solid rgb(100, 73, 52) ;
+    margin: 0;
+    width: 60%;
+    background-color: transparent;
+    padding: .2em;
+    outline: none;
+
+}
+.text1{
+    border: 5px solid rgb(100, 73, 52) ;
+    height: 4em;
+    max-height: 6em;
+    min-height: 4em;
+    margin: 0;
+    padding: .2em;
+    margin-bottom: 1em;
+    width: 60%;
+    max-width: 60%;
+    min-width: 60%;
+    background-color: transparent;
+    outline: none;
+    resize: both;
+    
+}
+.submit{
+    font-family: 'Bellota Text';
+    font-weight: 900;
+    background-color: rgb(240, 158, 158);
+    border: none;
+    margin-left: 2px;
+    height: 2em;
+    width: 40%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.article3__div3{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article3__div3--img{
+    width: 17em;
+    margin-left: 6em;
+}
+
+
+
 footer {
     background-color: rgb(85, 46, 46);
     width: 100%;
@@ -629,7 +765,7 @@ footer {
     transition: all .2s ;
 }
 /* Estilos para pantallas más pequeñas (dispositivos móviles) */
-@media screen and (max-width: 860px){
+@media screen and (max-width: 960px){
     .titulo__nav--ul1{
         width: 60%;
         transition: all ease .3s;
@@ -637,6 +773,9 @@ footer {
     .div__div--h2{
         font-size: 2em;
         margin-left: 1em
+    }
+    .article3__div1{
+        width: 90%;
     }
 }
 @media screen and (max-width: 778px) {
@@ -934,6 +1073,51 @@ footer {
         height: 19em;
         object-fit: cover;
         object-position: left;
+    }
+    .article3{
+        height: 110vh;
+    }
+    .article3__div1{
+        flex-wrap: wrap-reverse;
+        width: 95%;
+        height: 90%;
+    }
+    .article3__div2{
+        width: 100%;
+        padding-top: 1em;
+        height: 65%;
+    }
+    .article3__div2--h3{
+        font-size: 1.3em;
+    }
+    .article3__div2--p{
+        font-size: 1.2em;
+    }
+    .text{
+        width: 75%;
+        font-size: 1em;
+    }
+    .mail{
+        font-size: 1em;
+        width: 75%;
+    }
+    .p{
+        width: 75%;
+    }
+    .text1{
+        width: 75%;
+        max-width: 75%;
+        min-width: 75%;
+    }
+    .article3__div3{
+        height: 20%;
+        width: 100%;
+    }
+    .article3__div3--img{
+        margin: auto;
+        width: 30%;
+        min-width: 11em;
+        max-width: 9em;
     }
     .footerdiv{
         width: 100%;

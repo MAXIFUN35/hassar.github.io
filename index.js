@@ -252,6 +252,3 @@ document.addEventListener('scroll', function() {
     item.style.transform = `translateY(${parallaxOffset}px)`;
   });
 });
-
-
-
