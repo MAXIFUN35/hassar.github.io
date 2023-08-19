@@ -1076,11 +1076,11 @@ footer {
         object-position: left;
     }
     .article3{
-        height: 80vh;
+        height: 70vh;
     }
     .article3__div1{
         flex-wrap: wrap-reverse;
-        width: 95%;
+        width: 90%;
         height: 90%;
     }
     .article3__div2{
