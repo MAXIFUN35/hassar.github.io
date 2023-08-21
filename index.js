@@ -11,7 +11,7 @@ function onScroll() {
   var barramenu3 = document.getElementById('barramenu__a3');
   var barramenu4 = document.getElementById('barramenu__a4');
   var imgcarrito1 = document.getElementById('imgcarrito1')
-  const whaticon = document.getElementById('whaticon')
+  const whaticon = document.querySelector('.whatimg')
   const whaticon2 = document.getElementById('whaticon2')
   const alto = header.offsetHeight;
   const alturaViewport = window.innerHeight;
@@ -19,12 +19,12 @@ function onScroll() {
 
   if (alto < alturaEnPixels ){
     if (scrollPosition >= triggerPosition) {
-        whaticon.style.opacity = '1';
         whaticon.style.transition = 'none';
-        whaticon.style.animation = 'slide-left 0.3s linear both';
-        whaticon2.style.opacity = '1';
+        whaticon.style.visibility = 'visible'
+        whaticon.style.animation = 'slide-left 0.2s linear both';
+        whaticon2.style.visibility = 'visible';
         whaticon2.style.transition = 'none';
-        whaticon2.style.animation = 'slide-left 0.5s linear both';
+        whaticon2.style.animation = 'slide-left 0.1s linear both';
         header.style.backgroundColor = 'white';
         header.style.background = 'white';
         header.style.color = 'rgb(240, 158, 158)'
@@ -34,12 +34,12 @@ function onScroll() {
         barramenu4.style.color = 'rgb(240, 158, 158)';
         imgcarrito1.src = 'media/carrito.png';
     } else {
-        whaticon.style.opacity = '0';
-        whaticon.style.transition = 'all ease 3s';
+        whaticon.style.visibility = 'hidden'
+        whaticon.style.transition = 'all ease 1s';
         whaticon.style.animation = 'slide-left2 0.3s linear both';
-        whaticon2.style.opacity = '0';
+        whaticon2.style.visibility = 'visible';
         whaticon2.style.transition = 'all ease 3s';
-        whaticon2.style.animation = 'slide-left2 0.5s linear both';
+        whaticon2.style.animation = 'slide-left2 0.1s linear both';
         header.style.backgroundColor = 'transparent';
         header.style.color = 'rgb(255, 255, 255)';
         header.style.animation = '.1s';
@@ -115,12 +115,9 @@ function isMobileDevice() {
   const whaticon2 = document.getElementById('whaticon2')
 
   function cerrarDesplegable() {
-    whaticon.style.opacity = '1';
+    whaticon.style.visibility = 'visible';
     whaticon.style.transition = 'none';
     whaticon.style.animation = 'slide-left 0.3s linear both';
-    whaticon2.style.opacity = '1';
-    whaticon2.style.transition = 'none';
-    whaticon2.style.animation = 'slide-left 0.3s linear both';
     opaco.style.zIndex = '-1';
     opaco.style.opacity = '0'
     desplegable.style.height = '3.5em';
@@ -151,12 +148,9 @@ function isMobileDevice() {
   checkbox.addEventListener('change', function() {
     if(isMobileDevice){
      if (checkbox.checked) {
-      whaticon.style.opacity = '0';
+      whaticon.style.visibility = 'hidden';
       whaticon.style.transition = 'all ease 3s';
       whaticon.style.animation = 'slide-left2 0.3s linear both';
-      whaticon2.style.opacity = '0';
-      whaticon2.style.transition = 'all ease 3s';
-      whaticon2.style.animation = 'slide-left2 0.5s linear both';
       opaco.style.zIndex = '5';
       opaco.style.bottom = '0';
       opaco.style.opacity = '.7'
@@ -232,15 +226,6 @@ setInterval(changeBackgroundImage, 5000);
 
 
 // parrallax
-
-
-// const parallaxBg = document.querySelector('.article2__div0--p-2');
-
-// window.addEventListener('scroll', () => {
-  // const yOffset = window.pageYOffset;
-  // parallaxBg.style.transform = `translateY(-${pageYOffset * 0.1}px)`; /* Ajusta el factor de velocidad */
-// });
-
 
 
 const parallaxItems = document.querySelectorAll('.article2__div0--ul-2');
