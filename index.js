@@ -225,15 +225,88 @@ changeBackgroundImage(); // Cambia la imagen al cargar la página
 setInterval(changeBackgroundImage, 5000);
 
 
-// parrallax
+// observer img12
 
 
-const parallaxItems = document.querySelectorAll('.article2__div0--ul-2');
+const li1 = document.getElementById('art2_div0-li1');
+const li5 = document.getElementById('art2_div0-li5');
+const li2 = document.getElementById('art2_div0-li2');
+const li6 = document.getElementById('art2_div0-li6');
+const li3 = document.getElementById('art2_div0-li3');
+const li7 = document.getElementById('art2_div0-li7');
+const li4 = document.getElementById('art2_div0-li4');
+const li8 = document.getElementById('art2_div0-li8');
+const divulti = document.getElementById('article2__div1')
 
-document.addEventListener('scroll', function() {
-  const yOffset = window.pageYOffset;
-  parallaxItems.forEach(item => {
-    const parallaxOffset = yOffset * 0.1; /* Ajusta el factor de velocidad */
-    item.style.transform = `translateY(${parallaxOffset}px)`;
-  });
-});
+// list1
+const cargarlist1 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      li1.style.animation = 'slide-top2 1s linear both';
+      li5.style.animation = 'slide-top2 1s linear both';
+      console.log('hola');
+    }
+  })};
+    const obserlist1 = new IntersectionObserver(cargarlist1, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    });
+obserlist1.observe(li2);
+
+
+// list2
+
+
+const cargarlist2 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      li2.style.animation = 'slide-top2 1s linear both';
+      li6.style.animation = 'slide-top2 1s linear both';
+      console.log('hola');
+    }
+  })};
+    const obserlist2 = new IntersectionObserver(cargarlist2, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    });
+obserlist2.observe(li7);
+
+
+// list3
+
+
+const cargarlist3 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      li3.style.animation = 'slide-top2 1s linear both';
+      li7.style.animation = 'slide-top2 1s linear both';
+      console.log('hola');
+    }
+  })};
+    const obserlist3= new IntersectionObserver(cargarlist3, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    });
+obserlist3.observe(li8);
+
+
+// list4
+
+
+const cargarlist4 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      li4.style.animation = 'slide-top2 1s linear both';
+      li8.style.animation = 'slide-top2 1s linear both';
+      console.log('hola');
+    }
+  })};
+    const obserlist4= new IntersectionObserver(cargarlist4, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    });
+obserlist4.observe(divulti);
