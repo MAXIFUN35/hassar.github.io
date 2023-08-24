@@ -159,9 +159,9 @@
             <div class="article3__div2">
                 <h3 class="article3__div2--h3">¡No te pierdas las nuevas ofertas y productos!</h3>
                 <p class="article3__div2--p">Suscribete a nuestra newsletter.</p>
-                <form class="form" id="form">
+                <form action="form.php" method="POST" class="form" id="form">
                     <p class="p">Mail:</p>
-                    <input type="email" class="mail" required name="mail" title="hola" id="mail">
+                    <input type="email" class="mail" required name="mail" title="" id="mail">
                     <input type="submit" class="submit" value="Suscribirme">
                 </form>
             </div>
@@ -218,5 +218,8 @@
     <a id="whaticon2" class="whatimg2" aria-label="Chat on WhatsApp" href="https://wa.me/5492614603699?text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank"><img class="whaticon2" alt="Chat on WhatsApp" src="media/whattransparente.png" /></a>
     
     <script src="index.js"></script>
+    <?php
+    include("form.php");
+    ?>
 </body>
 </html>
